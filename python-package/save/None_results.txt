@@ -1,0 +1,162 @@
+(None, 'Learn2Clean', 'COX', 'DBID -> Median -> COX', 'C-Index', 0.775885208424202, 789.066118478775)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 9.272989511489868)
+(None, 'Learn2Clean', 'COX', 'DBID -> Median -> COX', 'C-Index', 0.775885208424202, 816.803836107254)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 10.099571466445923)
+(None, 'Learn2Clean', 'COX', 'IPW -> CR -> COX', 'C-Index', 0.5566087763489328, 14.370572566986084)
+(None, 'Learn2Clean', 'COX', 'CCA -> COX', 'C-Index', 0.6479159251396854, 809.050199508667)
+(None, 'Learn2Clean', 'RSF', 'UC -> MUO -> RSF', 'C-Index', 0.9524586819016527, 12.37276315689087)
+(None, 'Learn2Clean', 'RSF', 'UC -> MUO -> RSF', 'C-Index', 0.7753519689859213, 12.757732391357422)
+(None, 'Learn2Clean', 'COX', 'UC -> MUO -> COX', 'C-Index', 0.6094257854821236, 6.672619104385376)
+(None, 'Learn2Clean', 'COX', 'UC -> MUO -> COX', 'C-Index', 0.7323545405111473, 9.841619729995728)
+(None, 'Learn2Clean', 'COX', 'UC -> MUO -> COX', 'C-Index', 0.7323545405111473, 9.760934352874756)
+(None, 'Learn2Clean', 'COX', 'UC -> MUO -> COX', 'C-Index', 0.7323545405111473, 9.344406127929688)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 9.1016206741333)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 9.480641603469849)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 9.73908519744873)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 10.345033168792725)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 10.496800184249878)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 9.191364526748657)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 10.074044466018677)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 9.640763521194458)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 8.192090511322021)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 8.343300580978394)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 8.219101667404175)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 8.089732646942139)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 8.297003984451294)
+(None, 'Learn2Clean', 'COX', 'DBID -> IG -> MR -> COX', 'C-Index', 0.912126155519304, 8.417323589324951)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 11.430363655090332)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 10.576170682907104)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 12.100375175476074)
+(None, 'Learn2Clean', 'COX', 'DBID -> Median -> COX', 'C-Index', 0.7372262773722628, 511.452956199646)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 11.402082443237305)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 8.854231357574463)
+(None, 'Learn2Clean', 'RSF', 'RFE -> DBT -> IG -> MR -> RSF', 'C-Index', 1.0, 12.674389600753784)
+(None, 'Learn2Clean', 'RSF', 'DBID -> IG -> MR -> RSF', 'C-Index', 0.8494623655913979, 12.821505546569824)
+('None', 'random', 'COX', 'RFE -> DBT -> MUO -> COX', 'C-Index', (     age  status
+297   21    True
+35    25    True
+403   27    True
+263   29    True
+143   30    True
+274   31   False
+14    32    True
+469   33    True
+138   34   False
+386   35   False
+29    36    True
+193   37    True
+326   38    True
+439   39    True
+619   40   False
+477   41    True
+276   42    True
+209   43   False
+663   44   False
+52    45   False
+172   46   False
+260   47   False
+307   48   False
+535   49   False
+560   50    True
+457   51   False
+374   52   False
+654   53   False
+302   54   False
+501   55    True
+140   56    True
+683   57   False
+97    58    True
+346   59   False
+202   60    True
+299   61    True
+12    62   False
+412   63   False
+564   64    True
+622   65   False
+62    66   False
+468   67    True
+360   68    True
+513   69   False
+529   70   False
+471   71   False
+586   72   False
+408   79   False, 5.473724842071533))
+('None', 'random', 'COX', 'IG -> MR -> COX', 'C-Index', {'quality_metric': 0.7323545405111473})
+('None', 'random', 'COX', 'UC -> DBT -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.8181818181818182)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 9.017000198364258)
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.7323545405111473)
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.7323545405111473)
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.7323545405111473)
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.7323545405111473)
+('None', 'random', 'COX', 'MI -> RFE -> DBID -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.48905109489051096)
+(None, 'Learn2Clean', 'COX', 'DBID -> Median -> COX', 'C-Index', 0.7372262773722628, 462.56844186782837)
+('None', 'random', 'COX', 'IPW -> LASSO -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.45983666762501774)
+('None', 'random', 'COX', 'Mean -> RFE -> ED -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.45739200106392286)
+('None', 'random', 'COX', 'CCA -> RFE -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.4449405034870351)
+('None', 'random', 'COX', 'IPW -> RFE -> ED -> COX', 'C-Index', 'Quality Metric: ', 0.44472433620142493, '\n')('None', 'random', 'COX', 'CCA -> IG -> DBT -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.43636363636363634, '\n')('None', 'random', 'COX', 'MI -> DBT -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.43636363636363634, '\n')
+('None', 'random', 'COX', 'Median -> LASSO -> DBID -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5547445255474452)
+('None', 'random', 'COX', 'CCA -> LASSO -> DBT -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5)
+('None', 'random', 'COX', 'IPW -> IG -> DBID -> CR -> COX', 'C-Index', 'Quality Metric: ', 0.7372262773722628)
+
+('None', 'random', 'COX', 'CCA -> UC -> DBID -> CR -> COX', 'C-Index', 'Quality Metric: ', 0.6897810218978102)
+('None', 'random', 'COX', 'Mean -> LASSO -> DBID -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5547445255474452)
+('None', 'random', 'COX', 'Median -> UC -> ED -> COX', 'C-Index', 'Quality Metric: ', 0.6495800587182293)
+
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.6479159251396854)
+(None, 'Learn2Clean', 'RSF', 'DBID -> IG -> MR -> RSF', 'C-Index', 0.8494623655913979, 11.191771984100342)
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.7323545405111473)
+('None', 'random', 'COX', 'LASSO -> CR -> COX', 'C-Index', 'Quality Metric: ', 0.5394235997824904)
+('None', 'random', 'COX', 'LASSO -> DBT -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.6666666666666666)
+('None', 'random', 'COX', 'UC -> DBID -> COX', 'C-Index', 'Quality Metric: ', 0.8201058201058201)
+('None', 'random', 'COX', 'IG -> DBT -> COX', 'C-Index', 'Quality Metric: ', 0.8)
+
+('None', 'random', 'COX', 'UC -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.7259380097879282)
+('None', 'random', 'COX', 'IG -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.7323545405111473)
+('None', 'random', 'COX', 'UC -> COX', 'C-Index', 'Quality Metric: ', 0.7259380097879282)
+('None', 'random', 'COX', 'UC -> DBID -> CR -> COX', 'C-Index', 'Quality Metric: ', 0.8201058201058201)
+
+(None, 'Learn2Clean', 'RSF', 'DBID -> IG -> MR -> RSF', 'C-Index', 0.8494623655913979, 13.120071172714233)
+(None, 'Learn2Clean', 'NN', 'DBID -> IG -> MR -> NN', 'C-Index', 0.8630797773654917, 35.06036615371704)
+(None, 'Learn2Clean', 'COX', 'DBID -> MI -> COX', 'C-Index', 0.7194871794871794, 17.47480535507202)
+(None, 'Learn2Clean', 'COX', 'DBID -> MI -> COX', 'C-Index', 0.7372262773722628, 634.9164116382599)
+(None, 'Learn2Clean', 'COX', 'DBID -> KNN -> COX', 'C-Index', 0.6622073578595318, 32.180737018585205)
+(None, 'Learn2Clean', 'COX', 'DBID -> KNN -> COX', 'C-Index', 0.6622073578595318, 14.594750881195068)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 15.133849859237671)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 14.20484709739685)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 14.235445976257324)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 13.673864603042603)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.7372262773722628, 488.67921900749207)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 14.297569036483765)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 14.1262686252594)
+(None, 'Learn2Clean', 'NN', 'Median -> DBID -> NN', 'C-Index', 0.8001182732111177, 69.3457841873169)
+(None, 'Learn2Clean', 'RSF', 'MI -> RSF', 'C-Index', 0.7875417130144605, 18.002679586410522)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 13.136436700820923)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 13.5001060962677)
+(None, 'Learn2Clean', 'RSF', 'MI -> RSF', 'C-Index', 0.7875417130144605, 16.69708776473999)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 12.328290462493896)
+(None, 'Learn2Clean', 'RSF', 'MI -> RSF', 'C-Index', 0.7875417130144605, 18.00353765487671)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 13.028356313705444)
+(None, 'Learn2Clean', 'RSF', 'MI -> RSF', 'C-Index', 0.7875417130144605, 20.220828771591187)
+(None, 'Learn2Clean', 'RSF', 'MI -> RSF', 'C-Index', 0.7875417130144605, 21.939092874526978)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 14.346274614334106)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.6707920792079208, 14.533643007278442)
+(None, 'Learn2Clean', 'NN', 'KNN -> UC -> NN', 'C-Index', 0.5082926018220234, 421.75882840156555)
+(None, 'Learn2Clean', 'NN', 'RFE -> DBT -> IG -> MR -> NN', 'C-Index', -0.3333333333333333, 276.2015118598938)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 8.9692702293396)
+(None, 'Learn2Clean', 'RSF', 'DBID -> IG -> MR -> RSF', 'C-Index', 0.8494623655913979, 12.267889499664307)
+(None, 'Learn2Clean', 'COX', 'Median -> DBID -> COX', 'C-Index', 0.7372262773722628, 440.7649278640747)
+(None, 'Learn2Clean', 'COX', 'ED -> UC -> MUO -> COX', 'C-Index', 0.6440566780372605, 10.59546971321106)
+(None, 'Learn2Clean', 'NN', 'UC -> MUO -> NN', 'C-Index', -1.0, 269.88144063949585)
+(None, 'Learn2Clean', 'NN', 'RFE -> DBT -> IG -> MR -> NN', 'C-Index', -0.3333333333333333, 255.64481210708618)
+('None', 'no-prep', 'NN', 'NN', 'C-Index', 'Quality Metric: ', -0.6666666666666666)
+(None, 'Learn2Clean', 'NN', 'KNN -> UC -> NN', 'C-Index', 0.4810684945317852, 403.9427053928375)
+('None', 'no-prep', 'NN', 'NN', 'C-Index', 'Quality Metric: ', -0.313969152100036)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 8.486881256103516)
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.7323545405111473)
+(None, 'Learn2Clean', 'RSF', 'DBID -> IG -> MR -> RSF', 'C-Index', 0.8494623655913979, 10.28722333908081)
+(None, 'Learn2Clean', 'NN', 'RFE -> DBT -> IG -> MR -> NN', 'C-Index', -0.3333333333333333, 275.58166909217834)
+('None', 'no-prep', 'COX', 'COX', 'C-Index', 'Quality Metric: ', 0.6094257854821236)
+(None, 'Learn2Clean', 'COX', 'IG -> MR -> COX', 'C-Index', 0.6094257854821236, 5.750037670135498)
+(None, 'Learn2Clean', 'COX', 'IG -> MR -> COX', 'C-Index', 0.6094257854821236, 5.843787431716919)
+(None, 'Learn2Clean', 'RSF', 'IG -> MR -> RSF', 'C-Index', 0.6544310435238595, 5.98437762260437)
+(None, 'Learn2Clean', 'COX', 'DBT -> IG -> MR -> COX', 'C-Index', 0.8, 8.281607151031494)

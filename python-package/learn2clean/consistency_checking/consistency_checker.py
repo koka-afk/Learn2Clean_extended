@@ -7,6 +7,7 @@ import time
 from ast import literal_eval
 import re
 import pandas as pd
+import os
 pd.options.mode.chained_assignment = None
 
 
@@ -18,9 +19,11 @@ def literal_converter(val):
 def constraint_discovery(dataset, file_name):
     # function to discover constraints from the input dataset
     # and generate the corresponding file
+    with open('got_here.txt', 'w+') as temp:
+        temp.write("WE GOT HERE")
     from tdda.constraints import discover_df
     constraints = discover_df(dataset)
-    fn = './save/' + file_name + '_constraints.tdda'
+    fn = 'save/' + file_name + '_constraints.tdda'
     with open(fn, 'w') as f:
         f.write(constraints.to_json())
 
@@ -148,12 +151,27 @@ class Consistency_checker():
     def CC_constraint_checking(self, dataset, file_name, verbose):
 
         from tdda.constraints import detect_df, verify_df
+        import os,sys
+        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
         # first define your constraints in a specific tdda
         # file associated to the dataset
 
+          # Ensure the 'save' directory exists
+        save_dir = 'save'
+        if not os.path.exists(save_dir):
+            os.makedirs(save_dir) 
+
+        # Define the file path
+        constraint_file_path = os.path.join(save_dir, file_name + '_constraints.tdda')
+
         detection_df = 0
 
+        constraint_discovery(dataset=dataset, file_name=file_name)
+
         d = detect_df(dataset,  'save/'+file_name + '_constraints.tdda')
+
+        # d = detect_df(dataset,  'C:/Users/yosef/OneDrive/Desktop/Learn2Clean/python-package/save/'+file_name + '_constraints.tdda')
+
 
         print("Constraints from the file:", file_name + '_constraints.tdda')
 
@@ -166,6 +184,7 @@ class Consistency_checker():
         print('Constraints passing: %d\n' % v.passes)
 
         print('Constraints failing: %d\n' % v.failures)
+        to_keep = []
 
         if detection_df is not None:
 
@@ -198,6 +217,8 @@ class Consistency_checker():
         # the same variable
         df = dataset.copy()
 
+        pattern_discovery(df, file_name)
+        print(f"HERE AFTER PATTERN_DISCOVERY: \n \n \n {df}")
         fn = 'save/'+file_name + '_patterns.txt'
 
         # converters=dict.fromkeys('pattern', literal_converter))
@@ -226,14 +247,13 @@ class Consistency_checker():
             pt = row['pattern']
 
             # vn = c+'_'+n+'_violation'
-            pte = re.compile(eval(pt)) if pt else False
+            pte = re.compile(pt) if pt else False # was eval(pt) then eval was removed
 
             a = 1
 
             for i in list(dataset.columns.values):
 
                 if i == c:
-
                     z = dataset[c].str.contains(
                         pte, regex=True).sum()-len(dataset)
 

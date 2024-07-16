@@ -51,10 +51,18 @@ class Feature_selector():
     about the applied feature selection
     """
 
-    def __init__(self, dataset,  strategy='LC', exclude=None,
-                 threshold=0.3, verbose=False):
+    def __init__(self, dataset, time_col=None, event_col=None,  strategy='LC', exclude=None,
+                 threshold=0.3, mode="original", config=None, verbose=False): # mode determines original function or survival analysis 
 
         self.dataset = dataset
+
+        self.time_column = time_col
+
+        self.event_column = event_col
+
+        self.mode = mode
+
+        self.config = config
 
         self.strategy = strategy
 
@@ -163,7 +171,11 @@ class Feature_selector():
         # Select the features with correlations above the threshold
         # Need to use the absolute value
         to_drop = [column for column in upper.columns if any(
-            upper[column].abs() > correlation_threshold)]
+            upper[column].abs() > correlation_threshold) and 
+            column != self.event_column and 
+            column != self.time_column] # ensuring that the event and time columns cannot be dropped
+        
+        print(f'TO_DROP LIST: ------------------------------> {to_drop}')
 
         # Dataframe to hold correlated pairs
         record_collinear = pd.DataFrame(
@@ -188,8 +200,7 @@ class Feature_selector():
                                               'corr_value': corr_values})
 
             # Add to dataframe
-            record_collinear = record_collinear.append(
-                temp_df, ignore_index=True)
+            record_collinear = pd.concat([record_collinear, temp_df], ignore_index=True)
 
         print('%d features with linear correlation greater than %0.2f.\n' %
               (len(to_drop), correlation_threshold))
@@ -214,7 +225,9 @@ class Feature_selector():
 
         from sklearn.feature_selection import SelectKBest
 
-        from sklearn.feature_selection import chi2
+        from sklearn.feature_selection import chi2, f_regression
+
+        from sklearn.preprocessing import LabelEncoder
 
         print("Apply WR feature selection")
 
@@ -240,7 +253,7 @@ class Feature_selector():
 
         else:
 
-            selector = SelectKBest(score_func=chi2, k='all')
+            selector = SelectKBest(score_func=f_regression, k='all') # score_func changed from chi2 to f_regression
 
             lsv = list(X.lt(0).sum().values)
 
@@ -267,9 +280,21 @@ class Feature_selector():
                 print("Input variables must be non-negative. "
                       "WR feature selection is only applied to "
                       "positive variables.")
-
-                selector.fit(X, Y)
-
+                # print(X.iloc[:,0])
+                # print('\n')
+                if self.event_column != None and self.time_column != None:
+                    new_data = X # .copy() # .dropna() # dropping NAN Values and working on data copy for now
+                    pre_event_labels = LabelEncoder().fit_transform(new_data[self.event_column].astype(bool))
+                    time_values = new_data[self.time_column]
+                    Y = np.array(list(zip(pre_event_labels, time_values)), dtype=[('event', '?'), ('time', '<f8')])
+                    print(f'Y AFTER REASSIGNMENT: {Y} \n')
+                    event_labels = LabelEncoder().fit_transform(Y['event'])
+                    print(f'X SHAPE:  {X}')
+                    print(f'Y SHAPE:  {Y.shape}')
+                    selector.fit(new_data, event_labels) # Using event_labels instead of the original Y
+                else:
+                    selector.fit(X, Y)
+                # TODO: ensure that if time and target are not "None"(doing survival analysis) then they will not be removed
                 Best_Flist = X.columns[selector.get_support(
                     indices=True)].tolist()
 
@@ -333,6 +358,8 @@ class Feature_selector():
 
         from sklearn.ensemble import ExtraTreesClassifier
 
+        from sklearn.preprocessing import LabelEncoder
+
         from sklearn.feature_selection import SelectFromModel
 
         print("Apply Tree-based feature selection ")
@@ -359,12 +386,23 @@ class Feature_selector():
             Y = df_target
 
             clf = ExtraTreesClassifier(n_estimators=50)
+            print(f'HERE BEFORE EXTRA TREES ______')
+            print(f'\n \n \n{Y}\n\n\n')
+            lab = LabelEncoder()
+            Y_transformed = lab.fit_transform(Y[self.time_column]) # Y needs to have be discrete values 
+            print(f'{Y_transformed}\n\n\n')
 
-            clf = clf.fit(X, Y)
+            clf = clf.fit(X, Y_transformed)
 
             model = SelectFromModel(clf, prefit=True)
 
             Best_Flist = X.columns[model.get_support(indices=True)].tolist()
+
+            if self.event_column not in Best_Flist: # avoid dropping event column
+                Best_Flist.append(self.event_column)
+
+            if self.time_column not in Best_Flist:
+                Best_Flist.append(self.time_column) # avoid dropping time column
 
             if self.verbose:
 
@@ -373,187 +411,409 @@ class Feature_selector():
             df = X[Best_Flist]
 
         return df
+    
+
+    def univariate_coxph_selection(self):
+        from sklearn.preprocessing import LabelEncoder, StandardScaler
+        from sksurv.linear_model import CoxPHSurvivalAnalysis
+        import numpy as np
+        import pandas as pd
+
+        print(">>Feature Selection started with UC method..... ")
+
+        # Drop rows with NaN values
+        x = self.dataset.dropna()
+
+        # Ensure the time and event columns are of correct data types
+        x[self.time_column] = x[self.time_column].astype(float)
+        x[self.event_column] = x[self.event_column].astype(bool)
+
+        print(x)
+
+        # Encode event column
+        event_labels = LabelEncoder().fit_transform(x[self.event_column])
+        y = np.array(list(zip(event_labels, x[self.time_column])), dtype=[('event', '?'), ('time', '<f8')])
+
+        # Standardize feature columns
+        feature_columns = x.columns.difference([self.event_column, self.time_column])
+        x[feature_columns] = StandardScaler().fit_transform(x[feature_columns])
+
+        # Perform feature selection using Univariate Cox Proportional Hazards Model
+        cph = CoxPHSurvivalAnalysis(alpha=0.1, verbose=10)
+        print(y)
+
+        try:
+            cph.fit(x[feature_columns], y)
+        except ValueError as e:
+            print("Error during fitting:", e)
+            return None
+
+        # Get the magnitudes of estimated coefficients as feature importance scores
+        coefs = cph.coef_
+        feature_importances = np.abs(coefs)
+
+        # Select the top features based on importance scores
+        k = int(len(feature_importances) * 0.8)  # Select top 80% features
+        top_features_indices = np.argsort(feature_importances)[-k:]
+
+        selected_features = np.zeros(len(self.dataset.columns), dtype=bool)
+
+        # Ensure that event and time columns are not removed
+        event_column_index = x.columns.get_loc(self.event_column)
+        time_column_index = x.columns.get_loc(self.time_column)
+
+        if event_column_index not in top_features_indices:
+            top_features_indices = np.append(top_features_indices, event_column_index)
+
+        if time_column_index not in top_features_indices:
+            top_features_indices = np.append(top_features_indices, time_column_index)
+
+        # Ensure all indices are within bounds
+        top_features_indices = [idx for idx in top_features_indices if idx < len(selected_features)]
+
+        selected_features[top_features_indices] = True
+
+        selected_columns = []
+
+        # Print the selected features
+        print("UC Selected Features:")
+        for i, feature in enumerate(x.columns):
+            if selected_features[i]:
+                selected_columns.append(feature)
+                if feature != self.event_column and feature != self.time_column:
+                    print(feature)
+
+        new_dataset = x[selected_columns]
+        return new_dataset
+
+    
+
+    def lasso_selection(self):
+
+        from sklearn.preprocessing import LabelEncoder
+        from sklearn.linear_model import LassoCV
+
+        print(">>Feature Selection started with lasso method..... ")
+
+        x = self.dataset.dropna() #TODO I have to include dropna() as NaNs are not allowed and lasso can be a starting state
+
+        # Encode the event column in the target array
+        event_labels1 = LabelEncoder().fit_transform(x[self.event_column].astype(bool))
+        y = np.array(list(zip(event_labels1, x[self.time_column])), dtype=[('event', '?'), ('time', '<f8')])
+        event_labels = LabelEncoder().fit_transform(y["event"])
+
+        # Fit LassoCV with encoded event column and time column
+        # warnings.filterwarnings("ignore", category=ConvergenceWarning)
+        lasso = LassoCV(cv=5)
+        lasso.fit(x, event_labels)
+        # Return the selected features based on non-zero coefficient values
+        selected_features = lasso.coef_ != 0
+
+        event_column_index = x.columns.get_loc(self.event_column)
+        time_column_index = x.columns.get_loc(self.time_column)
+        selected_features[event_column_index] = True # Ensuring that event column excluded
+        selected_features[time_column_index] = True # Ensuring that time column excluded
+
+        print("LASSO Selected Features:")
+        
+        selected_columns = []
+
+        for feature, selected in zip(x, selected_features):
+            if selected:
+                selected_columns.append(feature)
+                print(feature)
+        
+        return x[selected_columns]
+    
+
+    def rfe_selection(self):
+
+        from sklearn.preprocessing import LabelEncoder
+        from sklearn.feature_selection import RFECV
+        from sklearn.linear_model import LassoCV
+
+        print(">>Feature Selection started with RFE method..... ")
+        
+        x = self.dataset.dropna() #TODO I have to include dropna() as NaNs are not allowed and rfe can be a starting state
+
+        event_labels = LabelEncoder().fit_transform(x[self.event_column].astype(bool))
+        
+        y = np.array(list(zip(event_labels, x[self.time_column])), dtype=[('event', '?'), ('time', '<f8')])
+
+        # Encode the event column in the target array
+        Endcoded_event_labels = LabelEncoder().fit_transform(y["event"])
+
+        # Perform feature selection using Recursive Feature Elimination (RFE)
+        #warnings.filterwarnings("ignore", category=ConvergenceWarning)
+        rfecv = RFECV(estimator=LassoCV(cv=5), step=1, scoring='neg_mean_squared_error')
+        rfecv.fit(x, Endcoded_event_labels)
+
+        selected_features = rfecv.support_
+
+        event_column_index = x.columns.get_loc(self.event_column)
+        time_column_index = x.columns.get_loc(self.time_column)
+        selected_features[event_column_index] = True # Ensuring that event column excluded
+        selected_features[time_column_index] = True # Ensuring that time column excluded
+
+        print("RFE Selected Features:")
+
+        selected_columns = []
+
+        for feature, selected in zip(x, selected_features):
+            if selected:
+                selected_columns.append(feature)
+                print(feature)
+    
+        return x[selected_columns]
+    
+
+    def information_gain_selection(self):
+
+        from sklearn.preprocessing import LabelEncoder
+        from sklearn.feature_selection import SelectKBest, f_regression
+
+        print(">>Feature Selection started with information gain method..... ")
+
+        x = self.dataset.dropna()#TODO I have to include dropna() as NaNs are not allowed and IG can be a starting state
+
+        event_labels1 = LabelEncoder().fit_transform(x[self.event_column].astype(bool))
+       
+        time_values = x[self.time_column]
+
+        y = np.array(list(zip(event_labels1, time_values)), dtype=[('event', '?'), ('time', '<f8')])
+
+        # Encode the event column in the target array
+        event_labels = LabelEncoder().fit_transform(y["event"])
+
+        # Perform feature selection using Information Gain
+        #warnings.filterwarnings("ignore", category=ConvergenceWarning)
+
+        k_best = SelectKBest(score_func=f_regression, k='all')  # changing from k = 'all' to k = 3
+        k_best.fit(x, event_labels)
+
+        selected_features = k_best.get_support()
+
+        event_column_index = x.columns.get_loc(self.event_column)
+        time_column_index = x.columns.get_loc(self.time_column)
+        selected_features[event_column_index] = True # Ensuring that event column excluded
+        selected_features[time_column_index] = True # Ensuring that time column excluded
+
+
+        print("Information Gain Selected Features:")
+
+        selected_columns = []
+
+        for feature, selected in zip(x, selected_features):
+            if selected:
+                selected_columns.append(feature)
+                print(feature)
+
+        return x[selected_columns]
+        
 
     def transform(self):
 
-        df = self.dataset['train'].copy()
-
-        fsd = self.dataset
-
         start_time = time.time()
-
-        to_keep = []
 
         print()
 
         print(">>Feature selection ")
 
-        print("Before feature selection:")
-
-        print(self.dataset['train'].shape[1], "features ")
-
-        if (self.strategy == "MR"):
-
-            dn = self.FS_MR_missing_ratio(
-                df, missing_threshold=self.threshold)
-
-        elif (self.strategy == "LC"):
-
-            d = df.select_dtypes(['number'])
-
-            do = df.select_dtypes(exclude=['number'])
-
-            dn = self.FS_LC_identify_collinear(
-                d, correlation_threshold=self.threshold)
-
-            dn = dn.join(do)
-
-        elif (self.strategy == 'VAR'):
-
-            dn = df.select_dtypes(['number'])
-
-            coef = dn.std()
-
-            print("Apply VAR feature selection with "
-                  "threshold=", self.threshold)
-
-            abstract_threshold = np.percentile(coef, 100. * self.threshold)
-
-            to_discard = coef[coef < abstract_threshold].index
-
-            dn.drop(to_discard, axis=1)
-
-        elif (not isinstance(self.dataset['target'], dict)):
-
-            dn = df.select_dtypes(['number'])
-
-            if dn.isnull().sum().sum() > 0:
-
-                dn = dn.dropna()
-
-                dt = self.dataset['target'].loc[dn.index]
-
-                print('Warning: This strategy requires no missing values,'
-                      ' so missing values have been removed applying '
-                      'DROP on the dataset.')
+        if self.mode == "survival":
+            if self.strategy == 'UC':
+                selected = self.univariate_coxph_selection()
+            
+            elif self.strategy == 'LASSO':
+                selected = self.lasso_selection()
+            
+            elif self.strategy == 'RFE':
+                selected = self.rfe_selection()
+            
+            elif self.strategy == 'IG':
+                selected = self.information_gain_selection()
+            
             else:
+                raise ValueError("Invalid feature selection strategy. Please choose from 'UC', 'LASSO', 'RFE', or 'IG'.")
+            
+            print("Feature selection done -- CPU time: %s seconds" %
+                (time.time() - start_time))
+            
+            return selected
+            
+        else:
 
-                dt = self.dataset['target'].loc[dn.index]
+            df = self.dataset['train'].copy()
 
-            if (self.strategy == 'L1'):
+            fsd = self.dataset
 
-                from sklearn.linear_model import Lasso
+            to_keep = []
 
-                print("Apply L1 feature selection with threshold=",
-                      self.threshold)
+            print("Before feature selection:")
 
-                model = Lasso(alpha=100.0, tol=0.01, random_state=0)
+            print(self.dataset['train'].shape[1], "features ")
 
-                model.fit(dn, dt)
+            if (self.strategy == "MR"):
 
-                coef = np.abs(model.coef_)
+                dn = self.FS_MR_missing_ratio(
+                    df, missing_threshold=self.threshold)
+
+            elif (self.strategy == "LC"):
+
+                d = df.select_dtypes(['number'])
+
+                do = df.select_dtypes(exclude=['number'])
+
+                dn = self.FS_LC_identify_collinear(
+                    d, correlation_threshold=self.threshold)
+
+                dn = dn.join(do)
+
+            elif (self.strategy == 'VAR'):
+
+                dn = df.select_dtypes(['number'])
+
+                coef = dn.std()
+
+                print("Apply VAR feature selection with "
+                    "threshold=", self.threshold)
 
                 abstract_threshold = np.percentile(coef, 100. * self.threshold)
 
-                to_discard = dn.columns[coef < abstract_threshold]
+                to_discard = coef[coef < abstract_threshold].index
 
-                dn = dn.drop(to_discard, axis=1)
+                dn.drop(to_discard, axis=1)
 
-            elif (self.strategy == 'IMP'):
+            elif (not isinstance(self.dataset['target'], dict)):
 
-                print("Apply IMP feature selection with"
-                      " threshold=", self.threshold)
+                dn = df.select_dtypes(['number'])
 
-                from sklearn.ensemble import RandomForestRegressor
+                if dn.isnull().sum().sum() > 0:
 
-                model = RandomForestRegressor(n_estimators=50,
-                                              n_jobs=-1,
-                                              random_state=0)
+                    dn = dn.dropna()
 
-                model.fit(dn, dt)
+                    dt = self.dataset['target'].loc[dn.index]
 
-                coef = model.feature_importances_
+                    print('Warning: This strategy requires no missing values,'
+                        ' so missing values have been removed applying '
+                        'DROP on the dataset.')
+                else:
 
-                abstract_threshold = np.percentile(coef, 100. * self.threshold)
+                    dt = self.dataset['target'].loc[dn.index]
 
-                to_discard = dn.columns[coef < abstract_threshold]
+                if (self.strategy == 'L1'):
 
-                dn = dn.drop(to_discard, axis=1)
+                    from sklearn.linear_model import Lasso
 
-            elif (self.strategy == "Tree"):
+                    print("Apply L1 feature selection with threshold=",
+                        self.threshold)
 
-                dn = self.FS_Tree_based(dn, dt)
+                    model = Lasso(alpha=100.0, tol=0.01, random_state=0)
 
-            elif (self.strategy == "WR"):
+                    model.fit(dn, dt)
 
-                dn = self.FS_WR_identify_best_subset(dn, dt)
+                    coef = np.abs(model.coef_)
 
-            elif (self.strategy == "SVC"):
+                    abstract_threshold = np.percentile(coef, 100. * self.threshold)
 
-                dn = self.FS_SVC_based(dn, dt)
+                    to_discard = dn.columns[coef < abstract_threshold]
+
+                    dn = dn.drop(to_discard, axis=1)
+
+                elif (self.strategy == 'IMP'):
+
+                    print("Apply IMP feature selection with"
+                        " threshold=", self.threshold)
+
+                    from sklearn.ensemble import RandomForestRegressor
+
+                    model = RandomForestRegressor(n_estimators=50,
+                                                n_jobs=-1,
+                                                random_state=0)
+
+                    model.fit(dn, dt)
+
+                    coef = model.feature_importances_
+
+                    abstract_threshold = np.percentile(coef, 100. * self.threshold)
+
+                    to_discard = dn.columns[coef < abstract_threshold]
+
+                    dn = dn.drop(to_discard, axis=1)
+
+                elif (self.strategy == "Tree"):
+
+                    dn = self.FS_Tree_based(dn, dt)
+
+                elif (self.strategy == "WR"):
+
+                    dn = self.FS_WR_identify_best_subset(dn, dt)
+
+                elif (self.strategy == "SVC"):
+
+                    dn = self.FS_SVC_based(dn, dt)
+
+                else:
+
+                    print("Strategy invalid. Please choose between "
+                        "'Tree', 'WR', 'SVC', 'VAR', 'LC' or 'MR'"
+                        " -- No feature selection done on the train dataset")
+
+                    dn = self.dataset['train'].copy()
 
             else:
 
                 print("Strategy invalid. Please choose between "
-                      "'Tree', 'WR', 'SVC', 'VAR', 'LC' or 'MR'"
-                      " -- No feature selection done on the train dataset")
+                    "'VAR', 'LC', 'MR' if you have no target, or 'Tree', "
+                    "'WR', 'SVC'"
+                    " or 'L1', 'IMP' if you have a target"
+                    "-- No feature selection done on the train dataset")
 
                 dn = self.dataset['train'].copy()
 
-        else:
+            to_keep = [column for column in dn.columns]
 
-            print("Strategy invalid. Please choose between "
-                  "'VAR', 'LC', 'MR' if you have no target, or 'Tree', "
-                  "'WR', 'SVC'"
-                  " or 'L1', 'IMP' if you have a target"
-                  "-- No feature selection done on the train dataset")
+            if (self.exclude is None):
 
-            dn = self.dataset['train'].copy()
+                fsd['train'] = dn[to_keep]
 
-        to_keep = [column for column in dn.columns]
+            elif (self.exclude not in self.dataset['train'].columns.values):
 
-        if (self.exclude is None):
+                print(
+                    "Exclude variable invalid. Please choose a variable"
+                    "from the input training dataset.")
 
-            fsd['train'] = dn[to_keep]
+            elif (self.exclude in dn.columns.values):
 
-        elif (self.exclude not in self.dataset['train'].columns.values):
+                fsd['train'] = dn[to_keep]
 
-            print(
-                "Exclude variable invalid. Please choose a variable"
-                "from the input training dataset.")
+            else:
 
-        elif (self.exclude in dn.columns.values):
+                print("and keep variable", self.exclude)
 
-            fsd['train'] = dn[to_keep]
+                to_keep.append(self.exclude)
 
-        else:
+                dn = self.dataset['train']
 
-            print("and keep variable", self.exclude)
+                fsd['train'] = dn[to_keep]
 
-            to_keep.append(self.exclude)
+            if (not isinstance(self.dataset['test'], dict)):
+                # if not self.dataset['test'].empty:
 
-            dn = self.dataset['train']
+                df_test = pd.DataFrame.from_dict(self.dataset['test'])
 
-            fsd['train'] = dn[to_keep]
+                to_keep = list(set(to_keep) & set(df_test.columns))
 
-        if (not isinstance(self.dataset['test'], dict)):
-            # if not self.dataset['test'].empty:
+                fsd['test'] = df_test[to_keep]
 
-            df_test = pd.DataFrame.from_dict(self.dataset['test'])
+            print("After feature selection:")
 
-            to_keep = list(set(to_keep) & set(df_test.columns))
+            print(len(to_keep), "features remain")
 
-            fsd['test'] = df_test[to_keep]
+            print(to_keep)
 
-        print("After feature selection:")
+            print("Feature selection done -- CPU time: %s seconds" %
+                (time.time() - start_time))
 
-        print(len(to_keep), "features remain")
+            print()
 
-        print(to_keep)
-
-        print("Feature selection done -- CPU time: %s seconds" %
-              (time.time() - start_time))
-
-        print()
-
-        return fsd
+            return fsd

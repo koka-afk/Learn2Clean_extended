@@ -1,0 +1,2189 @@
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8030226700251889} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7902444519544891} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7899064999436747} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7902444519544891} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7800695249130939} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7881824464409123} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6372097728767262} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7902444519544891} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7268704190291799} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7264384409156527} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7255104145184574} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7244792740771293} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7609518658734451} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7252864945914105} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5953622601387272} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7244792740771293} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8017338256541982} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7714856762158561} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.78369975571841} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7808127914723517} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7919788453063024} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7847077847077847} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6232873249405936} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7808127914723517} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6989494891351273} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7230394750767277} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.720182029844428} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7211345115885279} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7868916797488226} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7185777585647898} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.612994636170428} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7211345115885279} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7724980901451489} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.779560628903726} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.779560628903726} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7780529829851389} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7906426360822866} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7781236104935527} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6260372394252176} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7780529829851389} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7295177222545032} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7412062955529735} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7386711735502272} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7404668849688392} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7883787661406025} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7380798274002157} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6286263986633588} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7404668849688392} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7456708526107072} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7461056038842808} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7451952255715153} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7450940724256524} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7921134555517122} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7468446855116303} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6192356365477094} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7450940724256524} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7716809034313016} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7734195702065512} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7745670769872731} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.773836845399541} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7856865787432118} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7749593495934959} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6386920429236688} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.773836845399541} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7497219132369299} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.741031272879406} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7426001464281979} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7426001464281979} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7979467016164263} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7419842383676994} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6210174977242844} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7426001464281979} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7352941176470589} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7400466011548982} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7402492148718468} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7396413737210009} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7533606078316774} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7437185929648241} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6377207631192754} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7396413737210009} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7756369426751593} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.755746140651801} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7559748427672957} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7559748427672957} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7649418371440032} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.758882373232149} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6082202875075926} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7559748427672957} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7786345381526104} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.775826780135732} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7766885705052246} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.775826780135732} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7997892518440464} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7752709577527096} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.628483285288019} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.775826780135732} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7357154896342492} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7430995339945036} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7439359541163819} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7441749312940614} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8198833252309188} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7462866803526145} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6031055586465025} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7441749312940614} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7514491729110703} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7563994964330676} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7576584137641629} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7572387746537977} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.755974353992617} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7558177291914709} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6388382918437563} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7572387746537977} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.767483033343169} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7466795201371037} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7461439588688946} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7465724078834619} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7724137931034483} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7434261194850919} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5930214917825537} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7465724078834619} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7602749744039784} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7648595689092097} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7635532331809275} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7649684302198998} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7464659445566367} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7659911694780935} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6184909670563231} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7649684302198998} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7313861985472155} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7509806119018267} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7537823601927602} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7533340804662109} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7674418604651163} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7522501730902377} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6206443129520053} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7533340804662109} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7392141138732959} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7332653754672104} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7343980065692604} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7338316910182353} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7321246689753514} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7369840525328331} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5927592658138241} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7338316910182353} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7619585155919288} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.748327328872877} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7511065362840967} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7491507977354607} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7932701994761233} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.752298481932863} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6415237517073911} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7491507977354607} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.756922220676221} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.764758945574822} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.764758945574822} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7645584845143831} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7705533596837945} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7621838371375694} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6235198866511487} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7035130224106602} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7347289318303811} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7364465915190553} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7361245303274289} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7336466901684293} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.73732976110739} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.601152854325732} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7521118555199534} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7569826259071916} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7601715416758302} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7561029250054981} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7976729153199742} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7627573858549687} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6170922882427308} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7561029250054981} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7597812368531762} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7356737222509034} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7395973154362416} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7402168301497161} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7700875099443119} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7364958081290459} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6343857518720907} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7402168301497161} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7611455565397106} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7427516559887067} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7475295906178738} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7475295906178738} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7496721004309537} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7459356430093059} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5960224684985578} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7475295906178738} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7459356430093059} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7633477633477633} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7681280611635408} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7701588818540198} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.767889141082308} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7766912791857913} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7740570599613152} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6196092326381859} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.767889141082308} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7740570599613152} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7608289186662511} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.738255033557047} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7380385364797575} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7385797791729811} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8034693475261186} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7398953345952567} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6065142625935667} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7385797791729811} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7398953345952567} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7379117959617428} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7471369210499645} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7485557920340529} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7483530961791831} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7401201966854853} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7459391920033319} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6102680829539706} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7483530961791831} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7459391920033319} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7570118303868137} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7398712608860281} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7430897387353276} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7425217720560394} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7420070227314729} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7421966445571596} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6397308100996812} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7425217720560394} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7421966445571596} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7275325046435205} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7655287608309844} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7656331558617809} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7647979956154087} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7808876449420232} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.760128617363344} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6349607892739692} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7647979956154087} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.760128617363344} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7220437509560961} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7279660093692123} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.730253840287613} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7304717289465084} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8047464940668824} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7307605760576058} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.613516794819911} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7304717289465084} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7307605760576058} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7480809490579204} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7513479226133841} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7525108362406174} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7509250449307537} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7787242472266244} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7542001070090958} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6021973570958432} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7509250449307537} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7542001070090958} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7411746570063203} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7489752963332226} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7479782873601418} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7483106236845021} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.799795918367347} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7507889990982868} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6389676113360324} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7483106236845021} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7507889990982868} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.748569446852783} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7455230914231856} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457587181903864} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7467012252591895} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7905861843538897} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7488971026588769} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6314963817620566} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7467012252591895} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7488971026588769} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7563245129398081} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7505615573858166} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7499197775163119} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7498128142047278} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.744968967462855} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7471568952191675} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6179001721170396} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7498128142047278} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7471568952191675} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7553898524882476} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7535688361964674} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.750544398741834} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7481248487781272} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7669784465229769} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7521442986881938} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5942579371107398} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7481248487781272} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7521442986881938} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7245792182501043} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7420956627482772} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7439197405755978} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7443250912038913} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7841902052428368} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7446417636252296} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6226109818990798} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7443250912038913} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7446417636252296} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7274718397997497} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.715431081823174} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7191652937946184} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7171883580450302} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7730061349693251} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7174184751732757} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6000607041683529} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7171883580450302} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7174184751732757} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7346189164370982} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7414373621270173} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7386508765819111} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7394636015325671} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7739307535641547} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7361963190184049} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6086274112703154} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7394636015325671} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7361963190184049} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7226094229160859} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7246935547647292} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7258797943851325} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7257809410834322} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7452202826267664} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7234759522107628} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6091552857865453} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7257809410834322} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7234759522107628} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7146115250114033} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7346938775510204} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7354702750665484} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7348047914818101} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7648305084745762} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.731355252606255} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6056402207483166} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7348047914818101} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.731355252606255} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7170553935860058} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7374842238115271} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7404291123264619} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7393773664282709} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7497535002957997} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7414130434782609} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5937958605333739} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7393773664282709} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7414130434782609} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7444998533294221} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7524611793362428} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7523596874048513} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7524611793362428} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7593108249216847} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7526959022286125} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6344167679222357} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7524611793362428} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7526959022286125} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7522850980794906} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7301587301587301} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8070404172099087} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7301587301587301} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7585808580858086} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7526959022286125} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7702539298669892} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7656071346901441} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7677795563686256} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7670935284701578} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7778404815650866} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7695512438995358} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6223482355323781} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7670935284701578} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7695512438995358} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7341983097250327} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7628719886632026} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8088073394495413} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7628719886632026} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7676857844231199} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7695512438995358} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7473251028806585} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7381587041213861} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7394914906704941} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7354931310231699} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7807967313585291} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7361865218779943} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6395166590828657} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7354931310231699} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7361865218779943} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7285212392206962} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7473460721868365} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7587140439932318} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7473460721868365} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7445834067289061} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7361865218779943} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7449476323941584} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7511877140647443} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7504143188597945} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7500828637719589} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.753500823723229} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7519570565868933} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6158209257571153} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7500828637719589} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7519570565868933} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7486021024379333} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7349342999546896} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8194555644515612} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7349342999546896} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7526119402985074} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7519570565868933} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6955517931352933} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7216158433667155} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7189152694947676} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7194778890514234} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7300653594771241} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7210892236384705} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6121828953364727} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7194778890514234} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7210892236384705} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7159907300115875} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.692758675328791} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7738095238095238} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.692758675328791} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7261569416498994} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7210892236384705} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7609235715329534} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7440596696856686} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7439531166755461} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7436334576451785} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.765821338816541} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7450916585312941} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6115577127256181} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7436334576451785} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7450916585312941} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7086451892830025} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7613009100402804} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7836107554417413} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7613009100402804} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7671925566343042} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7450916585312941} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.728589332961983} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.721849520074311} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7219527298998865} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7219527298998865} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7782954766064841} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7211328976034859} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6207734359182021} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7219527298998865} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7211328976034859} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.70079883805374} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.727017937219731} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.795} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.727017937219731} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7258209223039656} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7211328976034859} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7470501474926253} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391121838597964} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7392171266659671} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391121838597964} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7472710453283996} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391258221939316} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6358811040339702} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391121838597964} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391258221939316} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7372162104816465} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.753495217071376} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8484187568157033} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.753495217071376} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7193605683836589} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391258221939316} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391258221939316} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7391258221939316} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7714534377719756} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.770179889298893} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.770179889298893} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7700645756457565} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7951172809956917} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7705033438929955} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6327243281542588} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7700645756457565} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7705033438929955} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7688607297899801} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7748843584032894} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8232502965599051} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7748843584032894} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7799328608728087} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7705033438929955} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7705033438929955} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7705033438929955} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7466647331786543} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7360800596188651} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7354412860640903} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7351218992867029} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7969924812030075} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.735179995688726} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6071609183776676} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7351218992867029} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.735179995688726} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6553136451821513} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7528668038812114} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8202160493827161} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7528668038812114} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7545546558704453} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.735179995688726} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.735179995688726} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.735179995688726} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7839551688541513} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7870390338580979} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7869312055208109} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7862842354970886} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7809469480889903} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7842746400885936} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6313552891182274} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7862842354970886} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7842746400885936} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7112195121951219} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7804655408489274} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8086142322097378} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7804655408489274} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.847910145461241} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7842746400885936} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7842746400885936} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7842746400885936} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.738855183328937} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.749975772846206} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7544335691442969} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7533675743773621} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7639564124056999} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7576500588466065} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6344663390912314} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7533675743773621} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7576500588466065} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7071400549234994} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7407702523240371} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7959454968428049} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7407702523240371} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7684842068113641} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7576500588466065} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7576500588466065} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7576500588466065} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7827138108189785} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7672955974842768} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7713781308617456} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7711574533818824} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8123351592615135} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7702547624512279} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6196648270973621} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7711574533818824} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7702547624512279} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6985178531327195} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7911571025399812} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8512733446519525} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7911571025399812} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7771652142984172} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7702547624512279} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7702547624512279} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7702547624512279} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7601510859301227} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7468223623023664} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7480624160380284} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7462023354345355} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457889309040907} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7435404655135597} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6276703452465323} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7462023354345355} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7435404655135597} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7138586376254538} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7536780159730979} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7615131578947368} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7536780159730979} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7359106529209622} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7435404655135597} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7435404655135597} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7435404655135597} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7787764112267423} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7795741773881362} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.777752476374815} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7787771831948082} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7661493288590604} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7792072322670376} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6253161995345543} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7787771831948082} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7792072322670376} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7779323133982383} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7828142833849666} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7677669902912622} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7828142833849666} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7923754867800779} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7792072322670376} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7792072322670376} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7792072322670376} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7988128709778194} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7748329865294054} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7783375314861462} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7776804293067572} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.792038027332145} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7778270509977827} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6224112613296876} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7776804293067572} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7778270509977827} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7467849223946785} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8009056839475328} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8466086956521739} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8009056839475328} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7476615646258503} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7778270509977827} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7778270509977827} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7778270509977827} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7518580312452601} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7403232666950234} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7429817099106764} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.741811994895789} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7760869565217391} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457517047299491} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6121540251986034} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.741811994895789} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457517047299491} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7190172096547245} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7564570039501671} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7932675960557634} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7564570039501671} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.736483780536644} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457517047299491} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457517047299491} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457517047299491} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7457517047299491} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7280625543006082} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.734865256889839} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7334147644858386} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7638527842386099} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6239071183320944} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7331965919848533} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7761490683229814} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7574382249117498} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7280625543006082} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7341781815405756} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7334147644858386} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7638527842386099} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6237655304237019} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7331965919848533} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7761490683229814} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7574382249117498} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7280625543006082} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7331857393694176} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7334147644858386} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7638527842386099} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6246504548511557} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7331965919848533} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7761490683229814} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7574382249117498} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7280625543006082} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7337201313077334} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7334147644858386} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7638527842386099} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.6236593394924074} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7327276891365753} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7331965919848533} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7761490683229814} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7339750153594102} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7574382249117498} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7328021457873146} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972420602097384} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972419782680944} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972420602097384} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972412556281305} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972391853582124} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.99723945071705} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9965622862447467} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972419214083912} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8049321753143988} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.99723945071705} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9969887302125469} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5617532113985114} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.997241745043502} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9982372046506811} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.997241745043502} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9975624746347883} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972419214083912} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972423071724507} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972419214083912} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972419214083912} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972710179017786} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972641470202974} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972665585428783} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972670422834509} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9966269775785581} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972707796417646} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5888788104760827} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972670422834509} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9970149165397876} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5613475603438943} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972704364208379} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9983189960130536} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972704364208379} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9976732297277638} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972707796417646} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972697304916207} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972707796417646} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.9972707796417646} 
+In Cox ... variable a: 26 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8208808877463316} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8208850440999884} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8208707150822654} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8208736539073035} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.794424974414027} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8209038213454986} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8065331612908025} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8208736539073035} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.7900968628974165} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.5498002362987806} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8208969214414736} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8214640160916645} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8208969214414736} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8156284561291793} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8209038213454986} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': None} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8209069218253259} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8209038213454986} 
+In Cox ... variable a: 26 
+variable res: {'quality_metric': 0.8209038213454986} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.5603851371820708} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5884067741761502} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.5603851371820708} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5884067741761502} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.5603851371820708} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5884067741761502} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.5603851371820708} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5884067741761502} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.5603851371820708} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5884067741761502} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.5603851371820708} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5884067741761502} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5899558776864999} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.5603851371820708} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5884067741761502} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5899558776864999} 
+variable res: {'quality_metric': 0.5789696934641116} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6174182415536177} 
+variable res: {'quality_metric': 0.6197894653095118} 
+variable res: {'quality_metric': 0.5895783609379656} 
+variable res: {'quality_metric': 0.5591424831461256} 
+variable res: {'quality_metric': 0.5836346786700458} 
+variable res: {'quality_metric': 0.6034676331862808} 
+variable res: {'quality_metric': 0.6181634652200073} 
+variable res: {'quality_metric': 0.5578880309473006} 
+variable res: {'quality_metric': 0.6181634652200073} 
+variable res: {'quality_metric': 0.5547184229043891} 
+variable res: {'quality_metric': 0.5664460729010687} 
+variable res: {'quality_metric': 0.5592440221256825} 
+variable res: {'quality_metric': 0.5892075563286275} 
+variable res: {'quality_metric': 0.6026927090007139} 
+variable res: {'quality_metric': 0.6180093184225313} 
+variable res: {'quality_metric': 0.5578522123123999} 
+variable res: {'quality_metric': 0.6180093184225313} 
+variable res: {'quality_metric': 0.5542731330811856} 
+variable res: {'quality_metric': 0.5660563373059014} 
+variable res: {'quality_metric': 0.5591263323252946} 
+variable res: {'quality_metric': 0.5884227984304842} 
+variable res: {'quality_metric': 0.6026927090007139} 
+variable res: {'quality_metric': 0.6180093184225313} 
+variable res: {'quality_metric': 0.5578522123123999} 
+variable res: {'quality_metric': 0.6180093184225313} 
+variable res: {'quality_metric': 0.5542731330811856} 
+variable res: {'quality_metric': 0.5660563373059014} 
+variable res: {'quality_metric': 0.5591263323252946} 
+variable res: {'quality_metric': 0.5884227984304842} 
+variable res: {'quality_metric': 0.6065936786510054} 
+variable res: {'quality_metric': 0.6146628411741013} 
+variable res: {'quality_metric': 0.5802634173271817} 
+variable res: {'quality_metric': 0.6146628411741013} 
+variable res: {'quality_metric': 0.5610611823459378} 
+variable res: {'quality_metric': 0.5660563373059014} 
+variable res: {'quality_metric': 0.5654718245987618} 
+variable res: {'quality_metric': 0.5899423137978723} 
+variable res: {'quality_metric': 0.58886963078294} 
+variable res: {'quality_metric': 0.5899987221326622} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5893489440361843} 
+variable res: {'quality_metric': 0.58886963078294} 
+variable res: {'quality_metric': 0.5899987221326622} 
+variable res: {'quality_metric': 0.6084917338321459} 
+variable res: {'quality_metric': 0.6154286026841432} 
+variable res: {'quality_metric': 0.5807918293308095} 
+variable res: {'quality_metric': 0.6154286026841432} 
+variable res: {'quality_metric': 0.5616195884652261} 
+variable res: {'quality_metric': 0.5664460729010687} 
+variable res: {'quality_metric': 0.5662841594700107} 
+variable res: {'quality_metric': 0.590407785484817} 
+variable res: {'quality_metric': 0.5901817932560725} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5899558776864999} 
+variable res: {'quality_metric': 0.5901817932560725} 
+variable res: {'quality_metric': 0.5905319860024377} 
+variable res: {'quality_metric': 0.6175954286890942} 
+variable res: {'quality_metric': 0.6189025141882264} 
+variable res: {'quality_metric': 0.5739228655108755} 
+variable res: {'quality_metric': 0.6189025141882264} 
+variable res: {'quality_metric': 0.5932259107566286} 
+variable res: {'quality_metric': 0.5812453463572231} 
+variable res: {'quality_metric': 0.5807902919089988} 
+variable res: {'quality_metric': 0.6014768804233368} 
+variable res: {'quality_metric': 0.5948137565735766} 
+variable res: {'quality_metric': 0.5960703411634897} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.597027210105045} 
+variable res: {'quality_metric': 0.5948137565735766} 
+variable res: {'quality_metric': 0.5960703411634897} 
+variable res: {'quality_metric': 0.5727065106160926} 
+variable res: {'quality_metric': 0.5840712918855095} 
+variable res: {'quality_metric': 0.5533851253787802} 
+variable res: {'quality_metric': 0.5840712918855095} 
+variable res: {'quality_metric': 0.5546853565460305} 
+variable res: {'quality_metric': 0.5659063858414407} 
+variable res: {'quality_metric': 0.553669846047467} 
+variable res: {'quality_metric': 0.5677343488128012} 
+variable res: {'quality_metric': 0.5767332871743466} 
+variable res: {'quality_metric': 0.5719679749146661} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5708116067917876} 
+variable res: {'quality_metric': 0.5767332871743466} 
+variable res: {'quality_metric': 0.5719679749146661} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.5497221145146698} 
+variable res: {'quality_metric': 0.5436025560947485} 
+variable res: {'quality_metric': 0.5493094922957821} 
+variable res: {'quality_metric': 0.5606271268464676} 
+variable res: {'quality_metric': 0.5723797483595208} 
+variable res: {'quality_metric': 0.5561565230522132} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5561565230522132} 
+variable res: {'quality_metric': 0.5723797483595208} 
+variable res: {'quality_metric': 0.5561565230522132} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.5497221145146698} 
+variable res: {'quality_metric': 0.5436025560947485} 
+variable res: {'quality_metric': 0.5493094922957821} 
+variable res: {'quality_metric': 0.5606271268464676} 
+variable res: {'quality_metric': 0.5723797483595208} 
+variable res: {'quality_metric': 0.5561565230522132} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.5497221145146698} 
+variable res: {'quality_metric': 0.5447076346514198} 
+variable res: {'quality_metric': 0.5493094922957821} 
+variable res: {'quality_metric': 0.5606271268464676} 
+variable res: {'quality_metric': 0.5723797483595208} 
+variable res: {'quality_metric': 0.5561565230522132} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7338282420006763} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7338282420006763} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7339731718707225} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7338282420006763} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7338282420006763} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7338282420006763} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7338282420006763} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7339731718707225} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7339731718707225} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7339731718707225} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8357363454877403} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7607821591788827} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7373853211009175} 
+variable res: {'quality_metric': 0.7338282420006763} 
+variable res: {'quality_metric': 0.8267877062738008} 
+variable res: {'quality_metric': 0.8394643315135749} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.8355160364762365} 
+variable res: {'quality_metric': 0.8405288329924797} 
+variable res: {'quality_metric': 0.7258981355161437} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.7132655269422203} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.5615497793035802} 
+variable res: {'quality_metric': 0.5432300163132137} 
+variable res: {'quality_metric': 0.6966024669984852} 
+variable res: {'quality_metric': 0.7267058613931944} 
+variable res: {'quality_metric': 0.7521206409048068} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.7258981355161437} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.7132655269422203} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.5615497793035802} 
+variable res: {'quality_metric': 0.5432300163132137} 
+variable res: {'quality_metric': 0.6966024669984852} 
+variable res: {'quality_metric': 0.7267058613931944} 
+variable res: {'quality_metric': 0.7521206409048068} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.7521206409048068} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.7258981355161437} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.7132655269422203} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.5615497793035802} 
+variable res: {'quality_metric': 0.5489940184883089} 
+variable res: {'quality_metric': 0.6966024669984852} 
+variable res: {'quality_metric': 0.7267058613931944} 
+variable res: {'quality_metric': 0.7521206409048068} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.7521206409048068} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.5624672679662497} 
+variable res: {'quality_metric': 0.5624672679662497} 
+variable res: {'quality_metric': 0.5624672679662497} 
+variable res: {'quality_metric': 0.5634618467457518} 
+variable res: {'quality_metric': 0.515129621759456} 
+variable res: {'quality_metric': 0.5634618467457518} 
+variable res: {'quality_metric': 0.5266846869499623} 
+variable res: {'quality_metric': 0.5505661140315407} 
+variable res: {'quality_metric': 0.5209944751381216} 
+variable res: {'quality_metric': 0.5684007197290432} 
+variable res: {'quality_metric': 0.5714285714285714} 
+variable res: {'quality_metric': 0.5607945820372485} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5640630009618467} 
+variable res: {'quality_metric': 0.5714285714285714} 
+variable res: {'quality_metric': 0.5607945820372485} 
+variable res: {'quality_metric': 0.5777213459002783} 
+variable res: {'quality_metric': 0.5945656060064355} 
+variable res: {'quality_metric': 0.5655438681826472} 
+variable res: {'quality_metric': 0.5945656060064355} 
+variable res: {'quality_metric': 0.5476963239963311} 
+variable res: {'quality_metric': 0.5684915036870792} 
+variable res: {'quality_metric': 0.587067550313127} 
+variable res: {'quality_metric': 0.5971501912095971} 
+variable res: {'quality_metric': 0.5786438737117618} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.596154610098121} 
+variable res: {'quality_metric': 0.5786438737117618} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': 0.5777213459002783} 
+variable res: {'quality_metric': 0.5945656060064355} 
+variable res: {'quality_metric': 0.5655438681826472} 
+variable res: {'quality_metric': 0.5945656060064355} 
+variable res: {'quality_metric': 0.5476963239963311} 
+variable res: {'quality_metric': 0.5684915036870792} 
+variable res: {'quality_metric': 0.587067550313127} 
+variable res: {'quality_metric': 0.5971501912095971} 
+variable res: {'quality_metric': 0.5786438737117618} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.596154610098121} 
+variable res: {'quality_metric': 0.5786438737117618} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': 0.49714383360999903} 
+variable res: {'quality_metric': 0.5188701732083267} 
+variable res: {'quality_metric': 0.4826160953075614} 
+variable res: {'quality_metric': 0.5188701732083267} 
+variable res: {'quality_metric': 0.5231680654489033} 
+variable res: {'quality_metric': 0.5136283469616802} 
+variable res: {'quality_metric': 0.4659008023340627} 
+variable res: {'quality_metric': 0.5157944365865158} 
+variable res: {'quality_metric': 0.4801700874969335} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5232003813761322} 
+variable res: {'quality_metric': 0.4801700874969335} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': 0.4889797773233356} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.5222680860308494} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.4955533596837945} 
+variable res: {'quality_metric': 0.5424687330070691} 
+variable res: {'quality_metric': 0.5029328698674778} 
+variable res: {'quality_metric': 0.5277134200677241} 
+variable res: {'quality_metric': 0.48471698113207545} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.48471698113207545} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.49714383360999903} 
+variable res: {'quality_metric': 0.5188701732083267} 
+variable res: {'quality_metric': 0.4826160953075614} 
+variable res: {'quality_metric': 0.5188701732083267} 
+variable res: {'quality_metric': 0.5231680654489033} 
+variable res: {'quality_metric': 0.5136283469616802} 
+variable res: {'quality_metric': 0.4659008023340627} 
+variable res: {'quality_metric': 0.5157944365865158} 
+variable res: {'quality_metric': 0.4801700874969335} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.5232003813761322} 
+variable res: {'quality_metric': 0.4801700874969335} 
+variable res: {'quality_metric': 0.5945584124109147} 
+variable res: {'quality_metric': 0.4889797773233356} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.5222680860308494} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.4955533596837945} 
+variable res: {'quality_metric': 0.5424687330070691} 
+variable res: {'quality_metric': 0.5029328698674778} 
+variable res: {'quality_metric': 0.5277134200677241} 
+variable res: {'quality_metric': 0.48471698113207545} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.48471698113207545} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.4889797773233356} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.5222680860308494} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.4955533596837945} 
+variable res: {'quality_metric': 0.5424687330070691} 
+variable res: {'quality_metric': 0.5029328698674778} 
+variable res: {'quality_metric': 0.5277134200677241} 
+variable res: {'quality_metric': 0.48471698113207545} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': None} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.48471698113207545} 
+variable res: {'quality_metric': 0.7323545405111473} 
+variable res: {'quality_metric': 0.4823273518216422} 
+variable res: {'quality_metric': 0.500163132137031} 
+variable res: {'quality_metric': 0.5103860793909734} 

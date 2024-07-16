@@ -326,8 +326,8 @@ class Reader():
                                      sep=self.sep,
                                      header=self.header,
                                      engine='c',
-                                     error_bad_lines=False,
-                                     encoding='ISO-8859-1')
+                                     on_bad_lines='skip',
+                                     encoding='ISO-8859-1') # changed 'error_bad_lines' as it was deprecated and removed 
 
             elif (type_doc == 'xls'):
 
@@ -395,7 +395,7 @@ class Reader():
 
         return df
 
-    def train_test_split(self, Lpath, target_name=None, encoding=False):
+    def train_test_split(self, Lpath, target_name=None, duration_column=None, encoding=False):
         """Creates train and test datasets
         Given a list of several paths and a target name,
         automatically creates and cleans train and test datasets.
@@ -461,7 +461,7 @@ class Reader():
                 if (target_name in df.columns):
 
                     df_train, df_test, y_train, y_test = train_test_split(
-                        df, df[target_name], test_size=0.33)
+                        df, df[[target_name, duration_column]], test_size=0.2, random_state=42) #added random state and changed test_size from 0.33
 
                 elif (target_name is None):
 
@@ -722,13 +722,13 @@ class Reader():
             else:
 
                 task = "regression"
-
-                if (y_train.nunique() <= 2):
+                print(y_train)
+                if (y_train[target_name].nunique() <= 2):
 
                     task = "classification"
                 # else:
 
-                if (y_train.dtype == object):
+                if (y_train[target_name].dtype == object):
 
                     task = "classification"
 
@@ -851,6 +851,11 @@ class Reader():
             else:
 
                 pass
+
+            print(y_test[duration_column].shape)
+            print(df_test.shape)
+            print(y_train.shape)
+            print(df_train.shape)
 
             return {"train": df_train,
                     "test": df_test,

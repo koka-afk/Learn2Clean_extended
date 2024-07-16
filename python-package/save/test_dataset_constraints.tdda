@@ -1,0 +1,171 @@
+{
+    "creation_metadata": {
+        "local_time": "2024-06-08 22:22:53",
+        "utc_time": "2024-06-08 20:20:53",
+        "creator": "TDDA 1.0.13",
+        "host": "KokaDell",
+        "user": "yosef",
+        "n_records": 62249,
+        "n_selected": 62249
+    },
+    "fields": {
+        "id": {
+            "type": "int",
+            "min": 1,
+            "max": 50000,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "time": {
+            "type": "int",
+            "min": 1,
+            "max": 60,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "orig_time": {
+            "type": "int",
+            "min": -40,
+            "max": 58,
+            "max_nulls": 0
+        },
+        "first_time": {
+            "type": "int",
+            "min": 1,
+            "max": 60,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "mat_time": {
+            "type": "int",
+            "min": 22,
+            "max": 229,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "balance_time": {
+            "type": "real",
+            "min": 0.0,
+            "max": 7831380.12,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "LTV_time": {
+            "type": "real",
+            "min": 0.0,
+            "max": 759.82798061,
+            "sign": "non-negative"
+        },
+        "interest_rate_time": {
+            "type": "real",
+            "min": 0.0,
+            "max": 37.5,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "hpi_time": {
+            "type": "real",
+            "min": 107.83,
+            "max": 226.29,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "gdp_time": {
+            "type": "real",
+            "min": -4.146710947,
+            "max": 5.1324641859,
+            "max_nulls": 0
+        },
+        "uer_time": {
+            "type": "real",
+            "min": 3.8,
+            "max": 10.0,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "REtype_CO_orig_time": {
+            "type": "int",
+            "min": 0,
+            "max": 1,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "REtype_PU_orig_time": {
+            "type": "int",
+            "min": 0,
+            "max": 1,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "REtype_SF_orig_time": {
+            "type": "int",
+            "min": 0,
+            "max": 1,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "investor_orig_time": {
+            "type": "int",
+            "min": 0,
+            "max": 1,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "balance_orig_time": {
+            "type": "real",
+            "min": 0.0,
+            "max": 8000000.0,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "FICO_orig_time": {
+            "type": "int",
+            "min": 400,
+            "max": 840,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "LTV_orig_time": {
+            "type": "real",
+            "min": 50.1,
+            "max": 218.5,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "Interest_Rate_orig_time": {
+            "type": "real",
+            "min": 0.0,
+            "max": 19.75,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "hpi_orig_time": {
+            "type": "real",
+            "min": 75.71,
+            "max": 226.29,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "default_time": {
+            "type": "int",
+            "min": 0,
+            "max": 1,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "payoff_time": {
+            "type": "int",
+            "min": 0,
+            "max": 1,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "status_time": {
+            "type": "int",
+            "min": 0,
+            "max": 2,
+            "sign": "non-negative",
+            "max_nulls": 0
+        }
+    }
+}

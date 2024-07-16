@@ -58,14 +58,22 @@ class Duplicate_detector():
         be excluded from deduplication
     """
 
-    def __init__(self, dataset, strategy='ED', threshold=0.6,
-                 metric='DL',  verbose=False, exclude=None):
+    def __init__(self, dataset, strategy='ED', threshold=0.6, time_col=None,
+                 event_col=None, metric='DL', mode="original", config=None,  verbose=False, exclude=None): # mode determines original function or survival analysis
 
         self.dataset = dataset
 
         self.strategy = strategy
 
         self.threshold = threshold
+
+        self.time_column = time_col
+
+        self.event_column = event_col
+
+        self.mode = mode
+
+        self.config = config
 
         self.metric = metric
 
@@ -252,10 +260,86 @@ class Duplicate_detector():
         print("Number of duplicate rows removed:", len(set(dup['r_New_ID'])))
 
         return dataset
+    
+
+    # Function for generating unique event IDs
+    def generate_event_ids(self):
+        # Combine selected columns to create a unique event identifier
+        data = self.dataset #.copy()
+        data['event_id'] = data[self.time_column].astype(str) + data[self.event_column].astype(str)
+        return data
+    
+
+    # Function for Unique Event Identifier-Based Deduplication
+    def deduplicate_by_event_id(self, df_with_event_ids):
+        dataset = df_with_event_ids
+
+        initial_rows = dataset.shape[0]  # Get the initial number of rows
+
+        df_deduplicated = dataset.drop_duplicates(subset=["event_id"])
+
+        final_rows = df_deduplicated.shape[0]  # Get the final number of rows after deduplication
+
+        num_duplicates = initial_rows - final_rows  # Calculate the number of duplicate rows removed
+
+        print(f"Number of Duplicate Rows identified by event id: {num_duplicates}")
+
+        print(f"Number of Rows After Deduplication by event id: {final_rows}")
+
+        print(df_deduplicated)
+
+        # Remove the 'event_id' column from df_deduplicated
+        df_deduplicated.drop(["event_id"], axis=1, inplace=True)
+
+        return df_deduplicated
+    
+
+    # Function for Timestamp-Based Deduplication
+    def deduplicate_by_timestamp(self):
+
+        dataset = self.dataset
+
+        initial_rows = dataset.shape[0]  # Get the initial number of rows
+
+        new_col = "timestamp"
+
+        dataset[new_col] = pd.to_datetime(dataset[self.time_column])
+
+        df_deduplicated = dataset.sort_values(by=self.time_column).drop_duplicates(subset=new_col)
+
+        final_rows = df_deduplicated.shape[0]  # Get the final number of rows after deduplication
+
+        num_duplicates = initial_rows - final_rows  # Calculate the number of duplicate rows removed
+
+        print(f"Number of Duplicate Rows identified by time: {num_duplicates}")
+        print(f"Number of Rows After Deduplication identified by time of event: {final_rows}")
+
+        dataset.drop([new_col], axis=1, inplace=True)
+        df_deduplicated.drop([new_col], axis=1, inplace=True) # no need for the column any more because it causes problems
+
+        return df_deduplicated
+    
+
+    def Exact_duplicate_removal(self):
+        
+        dataset = self.dataset
+
+        if len(dataset) > 0:
+
+            df = dataset.drop_duplicates()
+
+            print('Initial number of rows:', len(dataset))
+
+            print('After deduplication: Number of rows:', len(df))
+
+        else:
+            df = dataset
+            print("No duplicate detection, empty dataframe")
+
+        return df
+    
 
     def transform(self):
-
-        dedup = self.dataset
 
         start_time = time.time()
 
@@ -263,60 +347,93 @@ class Duplicate_detector():
 
         print(">>Duplicate detection and removal:")
 
-        for key in ['train', 'test']:
+        if self.mode == "survival":
+            if (self.strategy == "DBID"):
+                print (" started using event ID based deduplication .....")
+                event_id = self.generate_event_ids()
+                print(event_id)
+                dn = self.deduplicate_by_event_id(event_id)
 
-            if (not isinstance(self.dataset[key], dict)):
+            elif (self.strategy == 'DBT'):
+                print(" started using timestamp-based deduplication .....")
+                dn = self.deduplicate_by_timestamp()
 
-                if not self.dataset[key].empty:
+            elif (self.strategy == "ED"):
+                print(" started using exact duplicate removal mehtod .....")
+                dn = self.Exact_duplicate_removal()
 
-                    print("* For", key, "dataset")
+            else:
+                raise ValueError("Strategy invalid."
+                                "Please choose between "
+                                "'DBID', 'DBT' or 'ED'")
+            
+            print("Deduplication done -- CPU time: %s seconds" %
+              (time.time() - start_time))
+            print()
 
-                    if (self.strategy == "ED"):
+            return dn
 
-                        if self.metric:
+        else:
 
-                            print("Metric is not considered for 'ED'.")
+            dedup = self.dataset
 
-                        dn = self.ED_Exact_duplicate_removal(self.dataset[key])
+            for key in ['train', 'test']:
 
-                    elif (self.strategy == "AD"):
+                if (not isinstance(self.dataset[key], dict)):
 
-                        if self.metric:
+                    if not self.dataset[key].empty:
 
-                            print("Metric is not considered for 'AD'.")
+                        print("* For", key, "dataset")
 
-                        dn = self.jaccard_similarity(
-                                self.dataset[key], self.threshold)
+                        if (self.strategy == "ED"):
 
-                    elif (self.strategy == "METRIC"):
+                            if self.metric:
 
-                        if self.metric not in ('DL', 'JW', 'LM'):
+                                print("Metric is not considered for 'ED'.")
 
-                            print("Metric invalid. "
-                                  "Please choose between 'LM', 'JW' or 'DL'.")
+                            dn = self.ED_Exact_duplicate_removal(self.dataset[key])
 
-                        dn = self.AD_Approx_string_duplicate_removal(
-                                self.dataset[key],
-                                metric=self.metric,
-                                threshold=self.threshold)
+                        elif (self.strategy == "AD"):
+
+                            if self.metric:
+
+                                print("Metric is not considered for 'AD'.")
+
+                            dn = self.jaccard_similarity(
+                                    self.dataset[key], self.threshold)
+
+                        elif (self.strategy == "METRIC"):
+
+                            if self.metric not in ('DL', 'JW', 'LM'):
+
+                                print("Metric invalid. "
+                                    "Please choose between 'LM', 'JW' or 'DL'.")
+
+                            dn = self.AD_Approx_string_duplicate_removal(
+                                    self.dataset[key],
+                                    metric=self.metric,
+                                    threshold=self.threshold)
+
+                        else:
+                            raise ValueError("Strategy invalid."
+                                            "Please choose between "
+                                            "'ED', 'METRIC' or 'AD'")
+
+                        dedup[key] = dn
+                        
+                        # if key == 'test':
+                        #     dedup['target_test'] = dn # ensuring that target_test and test are of the same size
 
                     else:
-                        raise ValueError("Strategy invalid."
-                                         "Please choose between "
-                                         "'ED', 'METRIC' or 'AD'")
 
-                    dedup[key] = dn
+                        print("No", key, "dataset, no duplicate detection")
 
                 else:
 
                     print("No", key, "dataset, no duplicate detection")
 
-            else:
+            print("Deduplication done -- CPU time: %s seconds" %
+                (time.time() - start_time))
+            print()
 
-                print("No", key, "dataset, no duplicate detection")
-
-        print("Deduplication done -- CPU time: %s seconds" %
-              (time.time() - start_time))
-        print()
-
-        return dedup
+            return dedup
