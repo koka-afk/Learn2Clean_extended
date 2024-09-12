@@ -356,6 +356,9 @@ class Outlier_detector():
 
         dataset = self.dataset #.dropna()
         print(dataset)
+        if dataset is None: # fail-safe procedure
+            return dataset
+        
         envelope = EllipticEnvelope()
 
         needed_values = dataset[[self.time_column, self.event_column]]

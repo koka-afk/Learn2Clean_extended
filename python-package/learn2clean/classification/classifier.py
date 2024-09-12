@@ -193,8 +193,7 @@ class Classifier():
             accuracy = None
 
         else:
-
-            y_train = dataset['target'].loc[X_train.index]
+            y_train = dataset['target'].iloc[X_train.index]
 
             X_test = dataset['test'].select_dtypes(['number']).dropna()
 
@@ -208,11 +207,11 @@ class Classifier():
 
             if target in X_train.columns.values:
 
-                X_train = X_train.drop([target], 1)
+                X_train = X_train.drop([target], axis=1)
 
             if target in X_test.columns.values:
 
-                X_test = X_test.drop([target], 1)
+                X_test = X_test.drop([target], axis=1)
 
             # if (dataset['target'].nunique() < k):
 

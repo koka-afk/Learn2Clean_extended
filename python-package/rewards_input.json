@@ -1,0 +1,6 @@
+{
+    "Mean": {
+        "type": "Imputer",
+        "followed_by":{"UC": 0, "LASSO": 0, "RFE": 0, "IG": 0, "DBID": 0, "DBT": 0, "ED": 0, "MR": 0, "MUO": 0, "RSF": 100, "COX": 100, "NN": 100}
+    }
+}

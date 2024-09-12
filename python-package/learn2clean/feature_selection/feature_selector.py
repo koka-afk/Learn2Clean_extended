@@ -171,11 +171,7 @@ class Feature_selector():
         # Select the features with correlations above the threshold
         # Need to use the absolute value
         to_drop = [column for column in upper.columns if any(
-            upper[column].abs() > correlation_threshold) and 
-            column != self.event_column and 
-            column != self.time_column] # ensuring that the event and time columns cannot be dropped
-        
-        print(f'TO_DROP LIST: ------------------------------> {to_drop}')
+            upper[column].abs() > correlation_threshold)]
 
         # Dataframe to hold correlated pairs
         record_collinear = pd.DataFrame(
@@ -225,9 +221,7 @@ class Feature_selector():
 
         from sklearn.feature_selection import SelectKBest
 
-        from sklearn.feature_selection import chi2, f_regression
-
-        from sklearn.preprocessing import LabelEncoder
+        from sklearn.feature_selection import chi2
 
         print("Apply WR feature selection")
 
@@ -253,7 +247,7 @@ class Feature_selector():
 
         else:
 
-            selector = SelectKBest(score_func=f_regression, k='all') # score_func changed from chi2 to f_regression
+            selector = SelectKBest(score_func=chi2, k='all')
 
             lsv = list(X.lt(0).sum().values)
 
@@ -280,21 +274,9 @@ class Feature_selector():
                 print("Input variables must be non-negative. "
                       "WR feature selection is only applied to "
                       "positive variables.")
-                # print(X.iloc[:,0])
-                # print('\n')
-                if self.event_column != None and self.time_column != None:
-                    new_data = X # .copy() # .dropna() # dropping NAN Values and working on data copy for now
-                    pre_event_labels = LabelEncoder().fit_transform(new_data[self.event_column].astype(bool))
-                    time_values = new_data[self.time_column]
-                    Y = np.array(list(zip(pre_event_labels, time_values)), dtype=[('event', '?'), ('time', '<f8')])
-                    print(f'Y AFTER REASSIGNMENT: {Y} \n')
-                    event_labels = LabelEncoder().fit_transform(Y['event'])
-                    print(f'X SHAPE:  {X}')
-                    print(f'Y SHAPE:  {Y.shape}')
-                    selector.fit(new_data, event_labels) # Using event_labels instead of the original Y
-                else:
-                    selector.fit(X, Y)
-                # TODO: ensure that if time and target are not "None"(doing survival analysis) then they will not be removed
+
+                selector.fit(X, Y)
+
                 Best_Flist = X.columns[selector.get_support(
                     indices=True)].tolist()
 
@@ -358,8 +340,6 @@ class Feature_selector():
 
         from sklearn.ensemble import ExtraTreesClassifier
 
-        from sklearn.preprocessing import LabelEncoder
-
         from sklearn.feature_selection import SelectFromModel
 
         print("Apply Tree-based feature selection ")
@@ -386,23 +366,12 @@ class Feature_selector():
             Y = df_target
 
             clf = ExtraTreesClassifier(n_estimators=50)
-            print(f'HERE BEFORE EXTRA TREES ______')
-            print(f'\n \n \n{Y}\n\n\n')
-            lab = LabelEncoder()
-            Y_transformed = lab.fit_transform(Y[self.time_column]) # Y needs to have be discrete values 
-            print(f'{Y_transformed}\n\n\n')
 
-            clf = clf.fit(X, Y_transformed)
+            clf = clf.fit(X, Y)
 
             model = SelectFromModel(clf, prefit=True)
 
             Best_Flist = X.columns[model.get_support(indices=True)].tolist()
-
-            if self.event_column not in Best_Flist: # avoid dropping event column
-                Best_Flist.append(self.event_column)
-
-            if self.time_column not in Best_Flist:
-                Best_Flist.append(self.time_column) # avoid dropping time column
 
             if self.verbose:
 

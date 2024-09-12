@@ -17,9 +17,7 @@ class CoxRegressor:
     def updated_fit(self):
 
         self.model = CoxPHFitter(penalizer=0.1)
-
-        print(f"IN UPDATED FIT AND SIZE OF DATASET IS::::: {len(self.dataset)}")
-        
+                
         x = self.dataset
         x[self.event_column] = x[self.event_column].astype(bool)
 
@@ -28,9 +26,12 @@ class CoxRegressor:
         print("Building Cox proportional-hazards model.....")
 
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
-
-        self.model.fit(x_train, duration_col=self.time_column, event_col=self.event_column)
-        c_index = concordance_index(y_test[self.time_column], -self.model.predict_partial_hazard(x_test))
+        c_index = 0.0
+        try:
+            self.model.fit(x_train, duration_col=self.time_column, event_col=self.event_column)
+            c_index = concordance_index(y_test[self.time_column], -self.model.predict_partial_hazard(x_test))
+        except ValueError:
+            print("Problem occured while fitting Cox Model")
 
         print(f" Buidling Cox proportional-hazards model is done\n C-Index score: {c_index:.4f}")
         

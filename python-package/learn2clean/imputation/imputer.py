@@ -199,47 +199,27 @@ class Imputer():
         # rows both have observed data.
 
         from fancyimpute import KNN
-        # Create a copy of the dataset to avoid modifying the original one
-        df = dataset.copy()
 
-        # Select numerical columns
-        numerical_columns = dataset.select_dtypes(['number']).columns
+        df = dataset
 
-        # Check if there are any missing values in the numerical columns
-        if dataset[numerical_columns].isnull().sum().sum() > 0:
-            # Perform KNN imputation on the numerical columns
-            X_imputed = KNN(k=k, verbose=False).fit_transform(dataset[numerical_columns])
+        if dataset.select_dtypes(['number']).isnull().sum().sum() > 0:
 
-            # Create a DataFrame from the imputed values
-            df_imputed = pd.DataFrame(X_imputed, columns=numerical_columns, index=dataset.index)
+            temp = dataset.select_dtypes(['number'])
 
-            # Replace the original numerical columns with the imputed values
-            df[numerical_columns] = df_imputed
+            X = KNN(k=k, verbose=False).fit_transform(temp)
+
+            Z = dataset.select_dtypes(include=['object'])
+
+            df = pd.DataFrame.from_records(
+                X, columns=dataset.select_dtypes(['number']).columns)
+
+            df = df.join(Z)
+
+        else:
+
+            pass
 
         return df
-
-        # df = dataset
-
-        # if dataset.select_dtypes(['number']).isnull().sum().sum() > 0:
-
-        #     X = dataset.select_dtypes(['number'])
-
-        #     for i in X.columns:
-
-        #         X[i] = KNN(k=k, verbose=False).fit_transform(X)
-
-        #     Z = dataset.select_dtypes(include=['object'])
-
-        #     df = pd.DataFrame.from_records(
-        #         X, columns=dataset.select_dtypes(['number']).columns)
-
-        #     df = df.join(Z)
-
-        # else:
-
-        #     pass
-
-        # return df
 
     def MICE_imputation(self, dataset):
         # only for numerical values
@@ -416,6 +396,8 @@ class Imputer():
         # print(f'\n\n\ Size before MI: {len(self.dataset)} \n\n')
         df = self.dataset
 
+        size_before = df.copy().dropna()
+
         current_method = sys._getframe().f_code.co_name
         max_iter = 10
         random_state = 0
@@ -428,11 +410,11 @@ class Imputer():
         
         multiple_imputer = IterativeImputer(max_iter=max_iter, random_state=random_state, min_value=min_value)
         imputed_values = multiple_imputer.fit_transform(df)
-        imputed_values = pd.DataFrame(imputed_values, columns=df.columns)        
+        imputed_values = pd.DataFrame(imputed_values, columns=df.columns)     
         self.dataset = imputed_values
         df = imputed_values
 
-        # print(f"\n\n After Imputing::: {df} \n\n")
+        print(f"\nAfter Imputing {len(df) - len(size_before)} rows have been affected\n")
         # print(f"\n\n Before Inverse Encoding::: \n\n {df}")
 
         # print(f'\n\n\ Size after MI: {len(df)} \n\n')
@@ -643,7 +625,7 @@ class Imputer():
                         elif (self.strategy == "DROP"):
 
                             dn = self.NaN_drop(d)
-
+                            
                         else:
 
                             raise ValueError("Strategy invalid. Please "

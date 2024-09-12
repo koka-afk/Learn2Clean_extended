@@ -9,20 +9,15 @@ import re
 import random
 from random import randint
 
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-
-from learn2clean.normalization.normalizer import Normalizer
-from learn2clean.duplicate_detection.duplicate_detector import Duplicate_detector
-from learn2clean.outlier_detection.outlier_detector import Outlier_detector
-from learn2clean.consistency_checking.consistency_checker import Consistency_checker
-from learn2clean.imputation.imputer import Imputer
-from learn2clean.feature_selection.feature_selector import Feature_selector
-from learn2clean.regression.regressor import Regressor
-from learn2clean.clustering.clusterer import Clusterer
-from learn2clean.classification.classifier import Classifier
-from learn2clean.survival_analysis.cox_model import CoxRegressor
+from ..normalization.normalizer import Normalizer
+from ..duplicate_detection.duplicate_detector import Duplicate_detector
+from ..outlier_detection.outlier_detector import Outlier_detector
+from ..consistency_checking.consistency_checker import Consistency_checker
+from ..imputation.imputer import Imputer
+from ..feature_selection.feature_selector import Feature_selector
+from ..regression.regressor import Regressor
+from ..clustering.clusterer import Clusterer
+from ..classification.classifier import Classifier
 
 
 def update_q(q, r, state, next_state, action, beta, gamma):
@@ -86,7 +81,7 @@ class Qlearner():
     * verbose: Boolean,  default = 'False'
     """
 
-    def __init__(self, dataset, goal, target_goal, target_prepare, time_column=None,
+    def __init__(self, dataset, goal, target_goal, target_prepare,
                  verbose=False, file_name=None, threshold=None):
 
         self.dataset = dataset
@@ -96,8 +91,6 @@ class Qlearner():
         self.target_goal = target_goal
 
         self.target_prepare = target_prepare
-
-        self.time_column = time_column
 
         self.verbose = verbose
 
@@ -147,7 +140,6 @@ class Qlearner():
          2 (AD ED) for duplication detection
          1 (LASSO or OLS or MARS) regression or (HCA or KMEANS) for clustering
          or (CART or LDA or NB) for classification
-         or (COX) for Survival Analysis
          """
 
         if dataset['train'].copy().isnull().sum().sum() > 0:
@@ -192,13 +184,12 @@ class Qlearner():
 
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 100],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 100],
-                #[0, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, -1, -1, -1, -1, -1, 0, 0, 100],
                 [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
                  -1, -1, -1, -1]]).astype("float32")
 
             n_actions = 19
 
-            n_states = 19 # reverting back to 19 from 20 to test effects
+            n_states = 19
 
             check_missing = True
 
@@ -232,14 +223,13 @@ class Qlearner():
 
                           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 100],
                           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 100],
-                          #[-1, -1, -1, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0, 100],
 
                           [-1, -1, -1, -1, -1, -1, -1, -1, -1,  -1, -1, -1, -1,
                            -1]]).astype("float32")
 
             n_actions = 14
 
-            n_states = 14  #15 # changed from 14 to 15 as the second array from the end is for cox's model
+            n_states = 14
 
             check_missing = False
 
@@ -258,7 +248,7 @@ class Qlearner():
         return q, r, n_actions, n_states, check_missing
 
     def pipeline(self, dataset, actions_list, target_goal,
-                 target_prepare, time_column, check_missing):
+                 target_prepare, check_missing):
 
         dataset = dataset.copy()
 
@@ -269,12 +259,12 @@ class Qlearner():
 
         if check_missing:
 
-            actions_name = ["MICE", "EM", "MEAN", "MF",
+            actions_name = ["MICE", "EM", "KNN", "MF",
                             "DS", "MM", "ZS",
                             "MR", "WR", "LC", "Tree",
                             "ZSB", "LOF", "IQR",
                             "CC", "PC",
-                            "ED", "AD"] # replaced KNN with MEAN -> KNN not working with large datasets
+                            "ED", "AD"]
 
             L2C_class = [Imputer, Imputer, Imputer, Imputer,
                          Normalizer, Normalizer, Normalizer,
@@ -285,8 +275,7 @@ class Qlearner():
                          Duplicate_detector, Duplicate_detector,
                          Regressor, Regressor, Regressor,
                          Clusterer, Clusterer,
-                         Classifier, Classifier, Classifier,
-                         CoxRegressor] 
+                         Classifier, Classifier, Classifier]
 
         else:
 
@@ -302,8 +291,7 @@ class Qlearner():
                          Duplicate_detector, Duplicate_detector,
                          Regressor, Regressor, Regressor,
                          Clusterer, Clusterer,
-                         Classifier, Classifier, Classifier,
-                         CoxRegressor]
+                         Classifier, Classifier, Classifier]
 
         print()
 
@@ -317,20 +305,12 @@ class Qlearner():
 
         for a in actions_list:
 
-            with open('variable_a_values.txt', 'a') as a_values:
-                a_values.write(str(a) + '\n')
-
             if not check_missing:
 
-                if a in (0, 1, 2): # separated normalization from feature selection
-                    # normalization 0-2
+                if a in range(0, 5):
+                    # normalization 0-2, and feature selection 3-5
 
                     n = L2C_class[a](dataset=dataset, strategy=actions_name[a],
-                                     exclude=self.target_prepare,
-                                     verbose=self.verbose).transform()
-                if a in (3, 4, 5):
-                    # feature selection 3-5
-                    n = L2C_class[a](dataset=dataset, time_column=self.time_column, event_column=self.target_goal, strategy=actions_name[a],
                                      exclude=self.target_prepare,
                                      verbose=self.verbose).transform()
 
@@ -339,7 +319,7 @@ class Qlearner():
                     # and 11-12: duplicate detection
 
                     n = L2C_class[a](dataset=dataset, strategy=actions_name[a],
-                                     verbose=self.verbose).transform() # tried execluded target column while trying my own way of giving dataset
+                                     verbose=self.verbose).transform()
 
                 if a in (9, 10):
                     # Consistency checking
@@ -364,14 +344,6 @@ class Qlearner():
                                        strategy=goals_name[a -
                                                            len(actions_name)],
                                        verbose=self.verbose).transform()
-                if a == 21:
-                    # Cox PH Model
-                    model = L2C_class[a](dataset=dataset, target_goal=self.target_goal, time_column=self.time_column)
-                    c_index = model.fit() # fitting and returning the c_index
-                    res = {'quality_metric': c_index}
-                    with open('cox_testing.txt', 'a') as cox_testing:
-                        cox_testing.write(f'variable res: {str(res)} \n')
-
 
             else:
 
@@ -388,16 +360,10 @@ class Qlearner():
                         n = L2C_class[a](dataset=dataset,
                                          strategy=actions_name[a],
                                          verbose=self.verbose).transform()
-                        
-                    if a in (4, 5, 6):
-                        # normalization
+
+                    if a in range(4, 10):
+                        # normalization and feature selection
                         n = L2C_class[a](dataset=dataset,
-                                         strategy=actions_name[a],
-                                         exclude=self.target_prepare,
-                                         verbose=self.verbose).transform()
-                    if a in range(7, 10):
-                        # feature selection (Separated Normalization from feature selection)
-                        n = L2C_class[a](dataset=dataset, time_column=self.time_column, event_column=self.target_goal,
                                          strategy=actions_name[a],
                                          exclude=self.target_prepare,
                                          verbose=self.verbose).transform()
@@ -408,7 +374,7 @@ class Qlearner():
 
                         n = L2C_class[a](dataset=dataset,
                                          strategy=actions_name[a],
-                                         verbose=self.verbose).transform() # tried execluded target column while trying my own way of giving dataset
+                                         verbose=self.verbose).transform()
 
                     if a in (14, 15):
                         # Consistency checking
@@ -433,13 +399,6 @@ class Qlearner():
                         res = L2C_class[a](dataset=dataset,
                                            strategy=goals_name[a_new],
                                            verbose=self.verbose).transform()
-                    if a == 26:
-                        # Cox PH Model
-                        model = L2C_class[a](dataset=dataset, target_goal=self.target_goal, time_column=self.time_column)
-                        c_index = model.fit() # fitting and returning the c_index
-                        res = {'quality_metric': c_index}
-
-
 
         t = time.time() - start_time
 
@@ -452,12 +411,12 @@ class Qlearner():
 
         if check_missing:
 
-            methods, goals = ["MICE", "EM", "MEAN", "MF",
+            methods, goals = ["MICE", "EM", "KNN", "MF",
                               "DS", "MM", "ZS", "MR", "WR", "LC", "Tree",
                               "ZSB", "LOF", "IQR", "CC", "PC",
                               "ED", "AD"], ["LASSO", "OLS", "MARS",
                                             "HCA", "KMEANS", "CART",
-                                            "LDA", "NB", "COX"] # added Cox to goals
+                                            "LDA", "NB"]
 
         else:
 
@@ -467,7 +426,7 @@ class Qlearner():
                               "CC", "PC",
                               "ED", "AD"], ["LASSO", "OLS", "MARS",
                                             "HCA", "KMEANS",
-                                            "CART", "LDA", "NB", "COX"] # added Cox to goals
+                                            "CART", "LDA", "NB"]
 
         n_states = len(methods) + 1
 
@@ -534,10 +493,10 @@ class Qlearner():
             actions_strategy.append(traverse_name)
 
             strategy.append(self.pipeline(dataset, actions_list, target1,
-                                          target2, time_column=self.time_column, check_missing=check_missing)[1])
+                                          target2, check_missing)[1])
 
         strategy.append(self.pipeline(dataset, [g+len(methods)-1], target1,
-                                      target2, time_column=self.time_column, check_missing=check_missing)[1])
+                                      target2, check_missing)[1])
 
         print()
 
@@ -556,7 +515,7 @@ class Qlearner():
 
     def learn2clean(self):
 
-        goals = ["LASSO", "OLS", "MARS", "HCA", "KMEANS", "CART", "LDA", "NB", "COX"]
+        goals = ["LASSO", "OLS", "MARS", "HCA", "KMEANS", "CART", "LDA", "NB"]
 
         if self.goal not in goals:
 
@@ -569,10 +528,7 @@ class Qlearner():
 
             g = goals.index(self.goal)
 
-        with open('dataset_shape.csv', 'w+') as dataset_shape:
-            dataset_shape.write(str(self.dataset['target']))
-
-        if self.target_goal != self.dataset['target'].columns.values[0]:
+        if self.target_goal != self.dataset['target'].name:
 
             raise ValueError("Target variable invalid.")
 
@@ -669,24 +625,22 @@ class Qlearner():
               % (time.time() - start_l2c))
 
         metrics_name = ["MSE", "MSE", "MSE", "silhouette",
-                        "silhouette", "accuracy", "accuracy", "accuracy", 'C-index']
+                        "silhouette", "accuracy", "accuracy", "accuracy"]
 
-        print("=== Start Pipeline Execution ===")   
+        print("=== Start Pipeline Execution ===")
 
         start_pipexec = time.time()
 
         result_list = self.show_traverse(self.dataset, q, g, self.target_goal,
-                                         self.target_prepare,check_missing) # removed self.time_column parameter for the time being
+                                         self.target_prepare, check_missing)
 
         quality_metric_list = []
-
-        print(f'result_list: \n {result_list}')
 
         if result_list[1]:
 
             for dic in range(len(result_list[1])):
-                
-                if result_list[1][dic] != None:
+
+                if result_list[1][dic] is not None:
 
                     for key, val in result_list[1][dic].items():
 
@@ -708,7 +662,7 @@ class Qlearner():
                 print()
 
             else:
-                
+
                 result = max(x for x in quality_metric_list if x is not None)
 
                 result_l = quality_metric_list.index(result)
@@ -762,7 +716,7 @@ class Qlearner():
 
         if check_missing:
 
-            methods = ["-", "MICE", "EM", "MEAN", "MF", "-", "DS", "MM", "ZS",
+            methods = ["-", "MICE", "EM", "KNN", "MF", "-", "DS", "MM", "ZS",
                        "-", "MR", "WR", "LC", "Tree",
                        "-", "ZSB", "LOF", "IQR",
                        "-",  "-", "-",
@@ -823,7 +777,7 @@ class Qlearner():
 
             rand_actions_list[len(rand_actions_list)-1] = g+len(methods)-6
 
-            methods = ["MICE", "EM", "MEAN", "MF",
+            methods = ["MICE", "EM", "KNN", "MF",
                        "DS", "MM", "ZS",
                        "MR", "WR", "LC", "Tree",
                        "ZSB", "LOF", "IQR", "CC", "PC", "ED", "AD"]

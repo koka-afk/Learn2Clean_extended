@@ -4,7 +4,9 @@ import numpy as np
 import json
 import re
 import random
+import os.path
 from random import randint
+
 
 # import classes 
 from learn2clean.imputation.imputer import Imputer 
@@ -16,7 +18,7 @@ from learn2clean.survival_analysis.dh_neural_network import NeuralNetwork
 from learn2clean.survival_analysis.random_survival_forest import RSF
 
 
-def update_q(q, r, state, next_state, action, beta, gamma):
+def update_q(q, r, state, next_state, action, beta, gamma, states_dict):
 
     # Update Q-value using the Q-learning formula
 
@@ -27,7 +29,12 @@ def update_q(q, r, state, next_state, action, beta, gamma):
     # Q(s, a) = Q(s, a) + learning_rate * [reward + discount_factor * max(Q(s', a')) - Q(s, a)]
     # qsa represents the current Q-value for the state-action pair (state, action).
 
-    rsa = r[state, action]
+    action_name = states_dict[action]
+    current_state_name = states_dict[state]
+    #print(f'Action name: {action_name} \n\nCurrent State Name: {current_state_name}\n\n')
+
+    rsa = r[current_state_name]['followed_by'][action_name] #r[state, action]
+    #print(rsa)
     # rsa is the immediate reward obtained when taking the current action in the current state.
     qsa = q[state, action]
 
@@ -42,7 +49,7 @@ def update_q(q, r, state, next_state, action, beta, gamma):
 
     q[state][q[state] > 0] = rn
 
-    return r[state, action]
+    return r[current_state_name]['followed_by'][action_name] #r[state, action]
 
 
 def remove_adjacent(nums):
@@ -79,8 +86,14 @@ class SurvivalQlearner:
         if json_path is not None:
             with open(json_path) as file:
                 data = json.load(file)
-                # print(data)
                 self.json_file = data
+        
+        my_path = os.path.abspath(os.path.dirname(__file__))
+        path = os.path.join(my_path, "reward.json")
+
+        with open(path) as reward:
+            data = json.load(reward)
+            self.rewards = data
 
         self.verbose = verbose
 
@@ -134,6 +147,48 @@ class SurvivalQlearner:
 
                 setattr(self, k, v)
 
+
+    def get_states_actions(self):
+        n = 0
+        for key in self.rewards:
+            if len(self.rewards[key]["followed_by"]) != 0:
+                n += 1
+        return n + 1
+    
+    
+    def get_imputers(self):
+        imputer_no = 0
+        for key in self.rewards:
+            if self.rewards[key]['type'] == "Imputer":
+                imputer_no += 1
+        return imputer_no
+    
+
+    def edit_edge(self, u, v, weight):
+        if weight == -1:
+            self.rewards[u]['followed_by'].pop(v, None)
+        else:
+            self.rewards[u]['followed_by'][v] = weight
+
+    
+    def set_rewards(self, data):
+        self.rewards = data
+
+
+    def disable(self, op):
+        ops_names = []
+        for key in self.rewards:
+            if self.rewards[key]['type'] == op:
+                ops_names.append(key)
+        for val in ops_names: # loop in case op parameter was a preprocessing step like "Imputer"
+            for key in self.rewards:
+                self.rewards[key]['followed_by'].pop(val, None)
+            self.rewards.pop(val, None)
+
+        for key in self.rewards: # loop in case op parameter was a single preprocessing method like "Median"
+            self.rewards[key]['followed_by'].pop(op, None)
+        self.rewards.pop(op, None)
+
     def Initialization_Reward_Matrix(self, dataset):
         """ [Data Preprocessing Reward/Connection Graph]
 
@@ -164,65 +219,78 @@ class SurvivalQlearner:
         # Check if there are missing values in the dataset
         if dataset.copy().isnull().sum().sum() > 0:
 
+
+
             # Define a reward matrix for cases with missing values
-            r = np.array([
-                [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
-                [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0 ,0, 0, 100],
-                [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
-                [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
-                [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
+            # r = np.array([
+            #     [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
+            #     [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0 ,0, 0, 100],
+            #     [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
+            #     [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
+            #     [-1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
 
-                [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
-                [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
-                [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
-                [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
+            #     [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
+            #     [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
+            #     [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
+            #     [0, 0, 0, 0, 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 100],
                 
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
+            #     [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
+            #     [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
+            #     [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
 
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
-                [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]).astype("float32")
+            #     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
+            #     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
+            #     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
+            #     [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]).astype("float32")
+
+            r = self.rewards
             
             # Define the number of actions and states
-            n_actions = 16
+            n_actions = self.get_states_actions()
 
-            n_states = 16
+            n_states = self.get_states_actions()
 
             check_missing = True
 
         else:  
 
             # Define a reward matrix for cases without missing values
-            r = np.array([
-                          [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
-                          [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
-                          [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
-                          [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
+            # r = np.array([
+            #               [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
+            #               [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
+            #               [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
+            #               [-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, -1],
 
-                          [0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
-                          [0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
-                          [0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
+            #               [0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
+            #               [0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
+            #               [0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1],
 
-                          [0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
-                          [0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
-                          [0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
-                          [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]).astype("float32")
+            #               [0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
+            #               [0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
+            #               [0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 100],
+            #               [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]).astype("float32")
+
+            r = self.rewards
 
             # Define the number of actions and states
-            n_actions = 11
+            n_actions = self.get_states_actions()
 
-            n_states = 11
+            n_states = self.get_states_actions()
+
+            imputer_no = self.get_imputers()
+            
+            n_actions -= imputer_no
+            n_states -= imputer_no
 
             check_missing = False
 
         # Initialize a Q matrix with zeros
-        q = np.zeros_like(r)
+        zeros_mat = [[0.0 for x in range(n_actions)] for y in range(n_states)]
+        q = np.array(zeros_mat)
+        print(f'Q MATRIX INSIDE INITIALIZATION:::::\n\n{q}\n\n')
 
         # we prevent the transition from any survival model during preprocessing
-        r = r[~np.all(r == -1, axis=1)]
+        # r = r[~np.all(r == -1, axis=1)]
 
         # Print the reward matrix if verbose mode is enabled
         if self.verbose:
@@ -673,15 +741,40 @@ class SurvivalQlearner:
         # Initialize Q-matrix, reward matrix, number of actions, number of states, and missing value flag
         q, r, n_actions, n_states, check_missing = self.Initialization_Reward_Matrix(self.dataset)
 
+        state_names = []
+        for key in self.rewards:
+            #condition = len(self.rewards[key]['followed_by']) > 0
+            if self.rewards[key]["type"] == "Survival_Model" and key != self.goal:
+                continue
+            if check_missing:
+                state_names.append(key)
+            else:
+                if self.rewards[key]['type'] != 'Imputer':
+                    state_names.append(key)
+
+        #print(f"HERE STATES_NAMES ARRAY ----> {state_names}")
+
+        states_dict = {}
+        states_dict_reversed = {}
+        i = 0
+        for x in state_names:
+            states_dict[i] = x
+            states_dict_reversed[x] = i
+            i += 1
+
         for e in range(int(n_episodes)):
 
             states = list(range(n_states))
 
             random_state.shuffle(states)
+            # print(f'Random States -----> {states}')
 
             current_state = states[0]
+            #print(f"CURRENT STATE IN L2C::: {current_state}")
 
             goal = False
+
+            r_mat = r.copy()
 
             if e % int(n_episodes / 10.) == 0 and e > 0:
 
@@ -689,10 +782,24 @@ class SurvivalQlearner:
 
             while (not goal) and (current_state != n_states-1):
 
+                #print("HEREEEEEE")
                  # Implement epsilon-greedy exploration strategy to select actions
-                valid_moves = r[current_state] >= 0
+                valid = r_mat[states_dict[current_state]]['followed_by']
+
+                temp = [] #r[current_state] >= 0
+                for valid_state in valid:
+                    if valid_state in states_dict_reversed.keys():
+                        temp.append(states_dict_reversed[valid_state])
+                valid_moves = [False for x in  range(n_states)]
+                for x in temp:
+                    valid_moves[x] = True
+                valid_moves = np.array(valid_moves)
+                # print(type(valid_moves))
+                
 
                 if random_state.rand() < epsilon:
+
+                    #print("HEEEREEEE 111111")
 
                     actions = np.array(list(range(n_actions)))
 
@@ -709,12 +816,15 @@ class SurvivalQlearner:
                     next_state = action
 
                 else:
+                    #print("HEEEREEEE 222222")
+
 
                     if np.sum(q[current_state]) > 0:
 
                         action = np.argmax(q[current_state])
 
                     else:
+                        #print("HEEEREEEE 3333333")
 
                         actions = np.array(list(range(n_actions)))
 
@@ -726,7 +836,8 @@ class SurvivalQlearner:
 
                     next_state = action
 
-                reward = update_q(q, r, current_state, next_state, action, beta, gamma)
+                reward = update_q(q, r, current_state, next_state, action, beta, gamma, states_dict)
+                #print(f'REWARD HERE: {reward}')
 
                 if reward > 1:
 
@@ -746,6 +857,8 @@ class SurvivalQlearner:
         metrics_name = ["C-Index", "C-Index", "C-Index"]
 
         print("=== Start Pipeline Execution ===")
+
+        print(q)
 
         start_pipexec = time.time()
 
@@ -822,7 +935,7 @@ class SurvivalQlearner:
         print(rr)
         
         with open('./save/'+str(self.file_name)+'_results.txt',
-                  mode='a') as rr_file:
+                  mode='a+') as rr_file:
 
             print("{}".format(rr), file=rr_file)
 
@@ -936,17 +1049,19 @@ class SurvivalQlearner:
                     new_list.append(m)
 
                 new_list.append(g+len(methods))
-
-            p = self.construct_pipeline(dataset=self.dataset, actions_list=new_list, time_col=self.time_col, event_col=self.event_col, check_missing=check_missing)
+            dataset_copy = self.dataset.copy()
+            p = self.construct_pipeline(dataset=dataset_copy, actions_list=new_list, time_col=self.time_col, event_col=self.event_col, check_missing=check_missing)
             rr += str((dataset_name, "random", goals[g], traverse_name, metrics_name[g], "Quality Metric: ", p[0]['quality_metric'])) + "\n"
             average += p[0]['quality_metric']
         print(rr)
         print(f"**Average score over {loop} experiments is: {average/loop}**")
+        average_score_str = f"**Average score over {loop} experiments is: {average/loop}**\n\n"
+        rr += average_score_str
 
         if p[1] is not None:
 
             with open('./save/'+dataset_name+'_results.txt',
-                    mode='a') as rr_file:
+                    mode='a+') as rr_file:
 
                 print("{}".format(rr), file=rr_file)
 
@@ -1007,12 +1122,16 @@ class SurvivalQlearner:
 
             print(traverse_name)
             print(action_list)
-            
-            p = self.construct_pipeline(dataset=self.dataset, actions_list=action_list, time_col=self.time_col, event_col=self.event_col, check_missing=check_missing)
+            dataset_copy = self.dataset.copy()
+            p = self.construct_pipeline(dataset=dataset_copy, actions_list=action_list, time_col=self.time_col, event_col=self.event_col, check_missing=check_missing)
             print(p)
-            rr += str((dataset_name, "random", goals[g], traverse_name, metrics_name[g], "Quality Metric: ", p[0]['quality_metric'])) + "\n"
+            rr += str((dataset_name, "Custom", goals[g], traverse_name, metrics_name[g], "Quality Metric: ", p[0]['quality_metric'])) + "\n"
             pipeline_counter += 1
         print(rr)
+
+        with open('./save/'+str(self.file_name)+'_results.txt',
+                  mode='a+') as rr_file:
+            print("{}".format(rr), file=rr_file)
 
         print(f'**{pipeline_counter} Strategies Have Been Tried**')
 

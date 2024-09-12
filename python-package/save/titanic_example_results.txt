@@ -1,2 +1,4 @@
 ('titanic_example', 'learn2clean', 'CART', 'Survived', None, 'Tree -> LOF -> CART', 'accuracy', 0.7204166666666667, 418.7396008968353)
 ('titanic_example', 'learn2clean', 'CART', 'Survived', None, 'Tree -> LOF -> CART', 'accuracy', 0.7204166666666667, 399.9299783706665)
+('titanic_example', 'learn2clean', 'CART', 'Survived', None, 'LOF -> CART', 'accuracy', 0.7204166666666667, 648.4692134857178)
+('titanic_example', 'learn2clean', 'CART', 'Survived', None, 'LOF -> CART', 'accuracy', 0.7204166666666667, 662.0710787773132)

@@ -1,0 +1,21 @@
+('gbsg_missing_50_MNAR.csv', 'Learn2Clean', 'COX', 'MI -> Mean -> DBT -> COX', 'C-Index', 0.6437833714721587, 8.801475524902344)
+('gbsg_missing_50_MNAR.csv', 'Custom', 'COX', 'MI -> LASSO -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6503015553909639)
+
+('gbsg_missing_50_MNAR.csv', 'Learn2Clean', 'COX', 'MI -> Median -> DBT -> COX', 'C-Index', 0.6437833714721587, 9.919713973999023)
+('gbsg_missing_50_MNAR.csv', 'Learn2Clean', 'COX', 'MI -> Median -> DBT -> COX', 'C-Index', 0.6596491228070176, 8.581693887710571)
+('gbsg_missing_50_MNAR.csv', 'Custom', 'COX', 'MI -> LASSO -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6578139879377843)
+
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'KNN -> UC -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.588439837291694)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'MI -> RFE -> ED -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.5)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'Median -> UC -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6005713681091948)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'CCA -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5392156862745098)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'Median -> UC -> COX', 'C-Index', 'Quality Metric: ', 0.6005713681091948)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'KNN -> IG -> DBT -> COX', 'C-Index', 'Quality Metric: ', 0.5933638443935927)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'MI -> ED -> COX', 'C-Index', 'Quality Metric: ', 0.6394032377526188)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'Median -> IG -> ED -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.6085159427896601)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'MI -> DBID -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6467479674796748)
+('gbsg_missing_50_MNAR.csv', 'random', 'COX', 'Median -> LASSO -> DBT -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5649122807017544)
+**Average score over 10 experiments is: 0.5881741532901893**
+
+
+('gbsg_missing_50_MNAR.csv', 'Learn2Clean', 'COX', 'MI -> Median -> DBT -> COX', 'C-Index', 0.6596491228070176, 13.819531202316284)

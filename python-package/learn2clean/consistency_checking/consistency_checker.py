@@ -184,6 +184,7 @@ class Consistency_checker():
         print('Constraints passing: %d\n' % v.passes)
 
         print('Constraints failing: %d\n' % v.failures)
+        
         to_keep = []
 
         if detection_df is not None:

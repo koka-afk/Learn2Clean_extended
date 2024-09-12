@@ -1,0 +1,18 @@
+('flchain.csv', 'Learn2Clean', 'COX', 'Mean -> COX', 'C-Index', 0.6557101651911165, 34.323214530944824)
+('flchain.csv', 'Custom', 'COX', 'MI -> LASSO -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5836480057221232)
+
+('flchain.csv', 'random', 'COX', 'KNN -> RFE -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5875562160796353)
+('flchain.csv', 'random', 'COX', 'CCA -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.620356062278435)
+('flchain.csv', 'random', 'COX', 'Median -> RFE -> ED -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.5938975145448022)
+('flchain.csv', 'random', 'COX', 'Median -> UC -> DBID -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.5707311088048996)
+('flchain.csv', 'random', 'COX', 'Mean -> LASSO -> DBT -> COX', 'C-Index', 'Quality Metric: ', 0.6584372003835091)
+('flchain.csv', 'random', 'COX', 'Mean -> IG -> ED -> COX', 'C-Index', 'Quality Metric: ', 0.6557101651911165)
+('flchain.csv', 'random', 'COX', 'MI -> RFE -> DBT -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.6311619472729809)
+('flchain.csv', 'random', 'COX', 'MI -> LASSO -> DBID -> COX', 'C-Index', 'Quality Metric: ', 0.5572972660061858)
+('flchain.csv', 'random', 'COX', 'Mean -> RFE -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6311696662370485)
+('flchain.csv', 'random', 'COX', 'MI -> IG -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6126319579381423)
+**Average score over 10 experiments is: 0.6118949104736756**
+
+
+('flchain.csv', 'Learn2Clean', 'COX', 'Mean -> COX', 'C-Index', 0.6557101651911165, 35.236058473587036)
+('flchain.csv', 'Learn2Clean', 'COX', 'Mean -> COX', 'C-Index', 0.6557101651911165, 41.12736177444458)

@@ -1,0 +1,20 @@
+('gbsg_missing_40_MNAR.csv', 'Learn2Clean', 'COX', 'MI -> MUO -> COX', 'C-Index', 0.6114683112452434, 13.55046820640564)
+('gbsg_missing_40_MNAR.csv', 'Custom', 'COX', 'MI -> LASSO -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5870278277430959)
+
+('gbsg_missing_40_MNAR.csv', 'Learn2Clean', 'COX', 'MI -> Median -> DBT -> COX', 'C-Index', 0.6422578184591915, 7.921786308288574)
+('gbsg_missing_40_MNAR.csv', 'Custom', 'COX', 'MI -> LASSO -> ED -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6490318484816422)
+
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'Median -> UC -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.6018105484124902)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'MI -> IG -> DBID -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6258807588075881)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'MI -> RFE -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'Mean -> IG -> ED -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.5997900537987141)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'Median -> DBT -> COX', 'C-Index', 'Quality Metric: ', 0.6216628527841342)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'CCA -> IG -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5974102413184226)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'CCA -> IG -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.5974102413184226)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'MI -> DBT -> MR -> COX', 'C-Index', 'Quality Metric: ', 0.6422578184591915)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'Mean -> IG -> DBID -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.5994995829858215)
+('gbsg_missing_40_MNAR.csv', 'random', 'COX', 'CCA -> IG -> ED -> MUO -> COX', 'C-Index', 'Quality Metric: ', 0.5803703703703704)
+**Average score over 10 experiments is: 0.5966092468255155**
+
+
+('gbsg_missing_40_MNAR.csv', 'Learn2Clean', 'COX', 'MI -> Median -> DBT -> COX', 'C-Index', 0.6422578184591915, 9.624890089035034)
