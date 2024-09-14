@@ -21,8 +21,8 @@ This project extends the Learn2Clean framework to allow it to work with survival
 
     ```bash
     # Install core dependencies using conda
-    conda install numpy=1.20.3 tensorflow=2.11.0 scikit-learn=1.3.2 scipy=1.10.1 Theano=1.0.5 cachetools=5.3.3 scikit-survival=0.22.2 
-    impyute=0.0.8 keras=2.11.0 py_stringsimjoin=0.1.0  sklearn-contrib-py-earth=0.1.0 tdda=1.0.13
+    conda install numpy=1.23.0 tensorflow=2.11.0 scikit-learn=1.3.2 scipy=1.10.1 Theano=1.0.5 cachetools=5.3.3 scikit-survival=0.22.2 
+    impyute=0.0.8 keras=2.11.0 statsmodels=0.14.1 py_stringsimjoin=0.3.5  sklearn-contrib-py-earth=0.1.0 seaborn=0.13.2 jellyfish=1.1.0 tdda=1.0.13 lifelines=0.27.8 tf_slim=1.1.0
     ```
 
 **Note:** If you encounter any issues during installation, please refer to the troubleshooting section below.
@@ -33,6 +33,10 @@ There are 2 files used to run the framework; **app.py** and **run.py**. They are
 
 ## Troubleshooting
 
-1: **Use "conda install" command instead of "pip install" as pip can sometimes cause issues.**
+1: **Try to use both commands "conda install" and "pip install" as pip can sometimes cause issues and conda as well.**
 
 2: **Check that libraries names are not changed or misspelled.**
+
+3: **Check https://anaconda.org for packages as you can download packages from other developers and not necessarily conda:forge.**
+
+3: If the following error is encountered: **"AttributeError: module 'numpy' has no attribute 'ndarray'"**, run "conda install numpy" which will reinstall/update numpy and the issue will be resolved; however, version 1.23.0 works fine.
