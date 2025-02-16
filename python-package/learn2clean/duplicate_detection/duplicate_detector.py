@@ -6,8 +6,6 @@ import time
 import warnings
 import numpy as np
 import jellyfish as jf
-import py_stringsimjoin as ssj
-import py_stringmatching as sm
 import pandas as pd
 pd.options.mode.chained_assignment = None
 
@@ -223,41 +221,48 @@ class Duplicate_detector():
         print("Number of duplicate rows removed:", len(dataset)-len(df))
 
         return df
+    
+
+    # Tokenizer function: Split each row string into a set of words
+    def tokenize(text):
+        return set(text.split('*'))
+    
+    # Compute Jaccard similarity between two sets
+    def jaccard(set1, set2):
+        intersection = len(set1.intersection(set2))
+        union = len(set1.union(set2))
+        return intersection / union if union != 0 else 0
 
     def jaccard_similarity(self, dataset, threshold):
-
+        # Reindex dataset with unique IDs
         df = add_key_reindex(dataset)
-        # concatenate all columns and convert as one string
-        # for each row with '*' as separator
-
+        
+        # Concatenate all columns and convert them into a single string for each row
         A = dataset.applymap(str)
-
         A = A.apply(lambda x: '*'.join(x.values.tolist()), axis=1)
-
         A = A.astype(str)
+        A = A.str.replace(" ", "")  # Remove spaces
+        df['row'] = A  # Store the concatenated row string
 
-        A = A.str.replace(" ", "")
+        # Create a list of tokenized sets for each row
+        tokenized_rows = df['row'].apply(self.tokenize)
 
-        df['row'] = A
+        duplicate_ids = set()
 
-        ssj.profile_table_for_join(df)
+        # Compare each row with all others and remove rows with similarity above threshold
+        for i in range(len(tokenized_rows)):
+            for j in range(i + 1, len(tokenized_rows)):
+                similarity = self.jaccard(tokenized_rows[i], tokenized_rows[j])
+                if similarity >= threshold:
+                    duplicate_ids.add(df['New_ID'].iloc[j])
 
-        ws = sm.WhitespaceTokenizer(return_set=True)
+        # Remove duplicates based on the Jaccard similarity comparison
+        dataset = df[~df['New_ID'].isin(duplicate_ids)]
 
-        # auto join
-        output_pairs = ssj.jaccard_join(df, df, 'New_ID',
-                                        'New_ID', 'row', 'row', ws,
-                                        threshold, l_out_attrs=['row'],
-                                        r_out_attrs=['row'], n_jobs=-1)
-
-        dup = output_pairs[output_pairs['l_New_ID']
-                           != output_pairs['r_New_ID']]
-
-        dataset = df[~df['New_ID'].isin(dup['r_New_ID'])]
-
+        # Drop the added helper columns before returning the result
         dataset.drop(["New_ID", "row"], axis=1, inplace=True)
 
-        print("Number of duplicate rows removed:", len(set(dup['r_New_ID'])))
+        print("Number of duplicate rows removed:", len(duplicate_ids))
 
         return dataset
     

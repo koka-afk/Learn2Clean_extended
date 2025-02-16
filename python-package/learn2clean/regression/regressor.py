@@ -4,7 +4,7 @@
 import time
 import warnings
 from sklearn.model_selection import cross_val_score
-from pyearth import earth
+from sklearn.ensemble import HistGradientBoostingRegressor
 import pandas as pd
 from sklearn.linear_model import LassoCV
 from sklearn.metrics import mean_squared_error
@@ -212,52 +212,41 @@ class Regressor():
                       " folds for cross-validation:", mse)
         return mse
 
-    def MARS_regression(self, dataset, target):
-        # requires no missing value
-
-        k = self.k_folds
-
+    def MARS_regression(dataset, target, k_folds=5, verbose=False):
+        # Ensure no missing values in numerical columns
         X_train = dataset['train'].select_dtypes(['number']).dropna()
 
+        # Get corresponding target values
         y_train = dataset['target'].loc[X_train.index]
 
-        # X_train = LT_log_transform_skew_features(X_train)
+        if len(X_train.columns) <= 1 or len(X_train) < k_folds:
+            print('Error: Need at least one continuous variable and', k_folds, 'observations for regression')
+            return None
 
-        if (len(X_train.columns) <= 1) or (len(X_train) < k):
+        # Initialize the alternative model (HistGradientBoostingRegressor)
+        model = HistGradientBoostingRegressor(max_iter=100, 
+                                            max_leaf_nodes=32,
+                                            learning_rate=0.1, 
+                                            min_samples_leaf=20)
 
-            print('Error: Need at least one continous variable and ',
-                  k, ' observations for regression')
+        # Fit the model
+        model.fit(X_train, y_train)
 
-            cv_mars = None
+        # Function to calculate RMSE for cross-validation
+        def rmse_cv(model):
+            rmse = np.sqrt(-cross_val_score(model, X_train,
+                                            np.log1p(y_train),
+                                            scoring="neg_mean_squared_error", cv=k_folds))
+            return rmse
 
-            # y_train = X_train[target]
+        # Perform cross-validation and compute the mean RMSE
+        cv_mars = rmse_cv(model).mean()
 
-            # X_train = X_train.drop([target], 1)
+        if verbose:
+            print("Model coefficients and performance:")
+            print(model)
 
-        else:
-
-            model = Earth(enable_pruning=True, penalty=3,
-                          minspan_alpha=0.05, endspan_alpha=0.05)
-
-            model.fit(X_train, y_train)
-
-            def rmse_cv(model):
-
-                rmse = np.sqrt(-cross_val_score(model, X_train,
-                                                np.log1p(y_train),
-                                                scoring="neg_mean_"
-                                                "squared_error", cv=k))
-
-                return(rmse)
-
-            cv_mars = rmse_cv(model).mean()
-
-            if self.verbose:
-
-                print(model.summary())
-
-            print("MSE of MARS with", k, "folds "
-                  "for cross-validation:", cv_mars)
+        print("MSE of MARS with", k_folds, "folds for cross-validation:", cv_mars)
 
         return cv_mars
 

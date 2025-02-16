@@ -16,3 +16,5 @@
 
 ('flchain.csv', 'Learn2Clean', 'COX', 'Mean -> COX', 'C-Index', 0.6557101651911165, 35.236058473587036)
 ('flchain.csv', 'Learn2Clean', 'COX', 'Mean -> COX', 'C-Index', 0.6557101651911165, 41.12736177444458)
+('flchain.csv', 'Learn2Clean', 'COX', 'Mean -> COX', 'C-Index', 0.6557101651911165, 30.04589343070984)
+('flchain.csv', 'Learn2Clean', 'COX', 'Mean -> COX', 'C-Index', 0.6557101651911165, 25.963361501693726)

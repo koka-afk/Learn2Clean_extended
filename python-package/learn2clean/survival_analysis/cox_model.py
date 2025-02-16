@@ -16,6 +16,9 @@ class CoxRegressor:
 
     def updated_fit(self):
 
+        if self.dataset is None:
+            return 0
+
         self.model = CoxPHFitter(penalizer=0.1)
                 
         x = self.dataset
@@ -39,16 +42,3 @@ class CoxRegressor:
 
     
             
-"""
-Since Cox PH fit function requires a dataset with numerical values only,
-we have a couple of options:
-
-1- Encode data away from the original dataset (Do not know how much this affects the process)
-2- Encode the entire dataset (Maybe a better option)
-
-----------------------------------------------------
-
-Another thing is feature_selection class is now equipped with couple 
-label encodings because some methods do not accept continous values
-
-"""

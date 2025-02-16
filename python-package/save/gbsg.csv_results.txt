@@ -1,0 +1,1 @@
+('gbsg.csv', 'Learn2Clean', 'COX', 'DBID -> IG -> COX', 'C-Index', 0.6230352303523036, 8.582414627075195)

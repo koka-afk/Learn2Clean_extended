@@ -23,6 +23,7 @@ __all__ = ['Reader', 'Normalizer', 'Feature_selector', 'Outlier_detector',
            'Regressor', 'Classifier', 'Clusterer', ]
 
 import warnings
+np.warnings = warnings
 warnings.filterwarnings("ignore", message="numpy.dtype size changed")
 warnings.filterwarnings("ignore", message="numpy.ufunc size changed")
 warnings.filterwarnings("ignore", category=FutureWarning)

@@ -15,7 +15,7 @@ while True:
 if mode == "survival":
     path = "learn2clean/datasets/flchain.csv"
     file_name = path.split("/")[-1]
-    json_path = 'C:/Users/yosef/OneDrive/Desktop/Learn2Clean/python-package/config.json'
+    json_path = 'C:/Users/yosef/Desktop/Learn2Clean_extended/python-package/config.json'
     dataset = pd.read_csv(path)
     dataset.drop('rownames', axis=1, inplace=True)
     time_column = "futime"
